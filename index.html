@@ -401,7 +401,6 @@
 
       // 替换页面文本内容
       function replaceText(language) {
-
         fetch('/i18/i18_zh.json').then(response => {
           if (!response.ok) {
             throw new Error('Network response was not ok');
@@ -409,19 +408,12 @@
           return response.json();
         })
         .then(data => {
-          // 处理从服务器获取的 JSON 数据
-          console.log(data);
-
-                  // var data = languageData[language];
-        document.getElementById('navAction').innerText = language;
+            document.getElementById('navAction').innerText = data["Download"];
         })
         .catch(error => {
           // 处理错误情况
           console.error('There was a problem with the fetch operation:', error);
-          document.getElementById('navAction').innerText = error;
         });
-        // document.getElementById('about-link').innerText = data.about;
-        // 根据需要，替换更多文本内容
       }
 
       // 根据用户语言加载对应内容
