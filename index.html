@@ -116,7 +116,7 @@
         </div>
         <div class="flex flex-wrap">
           <div class="w-5/6 sm:w-1/2 p-6">
-            <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
+            <h3 id="id_feature_list_MathFormulaRecognition_feature_name" class="text-3xl text-gray-800 font-bold leading-none mb-3">
               Math Formula Recognition
             </h3>
             <p class="text-gray-600 mb-8">
@@ -414,6 +414,7 @@
             document.getElementById('id_support_2').innerText = data["Support"];
             document.getElementById('id_features_1').innerText = data["Features"];
             document.getElementById('id_features_2').innerText = data["Features"];
+            document.getElementById('id_feature_list_MathFormulaRecognition_feature_name').innerText = data["Features"];
         })
         .catch(error => {
           // 处理错误情况
