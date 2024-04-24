@@ -5,5 +5,8 @@
     "Features":"功能",
     "Math Formula Recognition":"数学公式识别",
     "Math Symbol Recognition":"数学符号识别",
-    "Math Formula Annotation":"数学公式注解"
+    "Math Formula Annotation":"数学公式注解",
+    "Math Formula Editor":"数学公式编辑器",
+    "Math Formula Poster":"数学公式卡片",
+    "Math Formula Render":"Latex公式实时渲染"
 }
