@@ -55,7 +55,7 @@
               <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#support-section">Support</a>
             </li>
             <li class="mr-3">
-              <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="privacy_policy.html">Privacy Policy</a>
+              <a  id="id_privacy_policy"class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="privacy_policy.html">Privacy Policy</a>
             </li>            
           </ul>
           <button
@@ -409,6 +409,7 @@
         })
         .then(data => {
             document.getElementById('navAction').innerText = data["Download"];
+            document.getElementById('id_privacy_policy').innerText = data["Privacy Policy"];
         })
         .catch(error => {
           // 处理错误情况
