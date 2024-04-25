@@ -119,7 +119,7 @@
             <h3 id="id_feature_list_MathFormulaRecognition_feature_name" class="text-3xl text-gray-800 font-bold leading-none mb-3">
               Math Formula Recognition
             </h3>
-            <p class="text-gray-600 mb-8">
+            <p id="id_feature_list_MathFormulaRecognition_feature_value" class="text-gray-600 mb-8">
               Harnessing the power of an advanced AI engine, it converts images of mathematical formulae into Latex code, eliminating the hassle of manual typing and saving you valuable time.
             </p>
           </div>
@@ -136,7 +136,7 @@
               <h3 id="id_feature_list_MathSymbolRecognition_feature_name" class="text-3xl text-gray-800 font-bold leading-none mb-3">
                 Math Symbol Recognition
               </h3>
-              <p class="text-gray-600 mb-8">
+              <p id="id_feature_list_MathSymbolRecognition_feature_value" class="text-gray-600 mb-8">
                 Draw a math symbol on white board, and instantly get its corresponding Latex code, saving you the trouble of searching for it.
               </p>
             </div>
@@ -147,7 +147,7 @@
             <h3 id="id_feature_list_MathFormulaAnnotation_feature_name" class="text-3xl text-gray-800 font-bold leading-none mb-3">
               Math Formula Annotation
             </h3>
-            <p class="text-gray-600 mb-8">
+            <p id="id_feature_list_MathFormulaAnnotation_feature_value" class="text-gray-600 mb-8">
               Add annotations to highlight key points and improve clarity. <br>Make your formulas more accessible and engaging!
             </p>
           </div>
@@ -164,7 +164,7 @@
               <h3 id="id_feature_list_MathFormulaEditor_feature_name" class="text-3xl text-gray-800 font-bold leading-none mb-3">
               Math Formula Editor
               </h3>
-              <p class="text-gray-600 mb-8">
+              <p id="id_feature_list_MathFormulaEditor_feature_value" class="text-gray-600 mb-8">
                 Write mathematical expressions with ease, without having to learn Latex. Make writing formulas a breeze!
               </p>
             </div>
@@ -175,7 +175,7 @@
             <h3 id="id_feature_list_MathFormulaPoster_feature_name" class="text-3xl text-gray-800 font-bold leading-none mb-3">
               Math Formula Poster
             </h3>
-            <p class="text-gray-600 mb-8">
+            <p id="id_feature_list_MathFormulaPoster_feature_value" class="text-gray-600 mb-8">
               Turn your mathematical expressions into stunning cards, perfect for sharing and discussing ideas with ease.
             </p>
           </div>
@@ -192,7 +192,7 @@
               <h3 id="id_feature_list_MathFormulaRender_feature_name" class="text-3xl text-gray-800 font-bold leading-none mb-3">
                 Math Formula Render
               </h3>
-              <p class="text-gray-600 mb-8">
+              <p id="id_feature_list_MathFormulaRender_feature_value" class="text-gray-600 mb-8">
                 Without the need for a bulky Latex distribution, experience real-time rendering of Latex equations.
               </p>
             </div>
@@ -408,19 +408,56 @@
           return response.json();
         })
         .then(data => {
-            document.getElementById('navAction').innerText = data["Download"];
-            document.getElementById('id_privacy_policy').innerText = data["Privacy Policy"];
-            document.getElementById('id_support_1').innerText = data["Support"];
-            document.getElementById('id_support_2').innerText = data["Support"];
-            document.getElementById('id_features_1').innerText = data["Features"];
-            document.getElementById('id_features_2').innerText = data["Features"];
-            document.getElementById('id_feature_list_MathFormulaRecognition_feature_name').innerText = data["Math Formula Recognition"];
-            document.getElementById('id_feature_list_MathSymbolRecognition_feature_name').innerText = data["Math Symbol Recognition"];
-            document.getElementById('id_feature_list_MathFormulaAnnotation_feature_name').innerText = data["Math Formula Annotation"];
-            document.getElementById('id_feature_list_MathFormulaEditor_feature_name').innerText = data["Math Formula Editor"];
-            document.getElementById('id_feature_list_MathFormulaPoster_feature_name').innerText = data["Math Formula Poster"];
-            document.getElementById('id_feature_list_MathFormulaRender_feature_name').innerText = data["Math Formula Render"];
-            
+            if (data["Download"]) {
+              document.getElementById('navAction').innerText = data["Download"];
+            }
+            if (data["Privacy Policy"]) {
+              document.getElementById('id_privacy_policy').innerText = data["Privacy Policy"];
+            }
+            if (data["Support"]) {
+              document.getElementById('id_support_1').innerText = data["Support"];
+              document.getElementById('id_support_2').innerText = data["Support"];
+            }
+            if (data["Features"]) {
+              document.getElementById('id_features_1').innerText = data["Features"];
+              document.getElementById('id_features_2').innerText = data["Features"];
+            }
+            if (data["Math Formula Recognition"]) {
+              document.getElementById('id_feature_list_MathFormulaRecognition_feature_name').innerText = data["Math Formula Recognition"];
+            }
+            if (data["Math Symbol Recognition"]) {
+              document.getElementById('id_feature_list_MathSymbolRecognition_feature_name').innerText = data["Math Symbol Recognition"];
+            }
+            if (data["Math Formula Annotation"]) {
+              document.getElementById('id_feature_list_MathFormulaAnnotation_feature_name').innerText = data["Math Formula Annotation"];
+            }
+            if (data["Math Formula Editor"]) {
+              document.getElementById('id_feature_list_MathFormulaEditor_feature_name').innerText = data["Math Formula Editor"];
+            }
+            if (data["Math Formula Poster"]) {
+              document.getElementById('id_feature_list_MathFormulaPoster_feature_name').innerText = data["Math Formula Poster"];
+            }
+            if (data["Math Formula Render"]) {
+              document.getElementById('id_feature_list_MathFormulaRender_feature_name').innerText = data["Math Formula Render"];
+            }
+            if (data["feature_list_MathFormulaRecognition_feature_value"]) {
+              document.getElementById('id_feature_list_MathFormulaRecognition_feature_value').innerText = data["feature_list_MathFormulaRecognition_feature_value"];
+            }
+            if (data["feature_list_MathSymbolRecognition_feature_value"]) {
+              document.getElementById('id_feature_list_MathSymbolRecognition_feature_value').innerText = data["feature_list_MathSymbolRecognition_feature_value"];
+            }
+            if (data["feature_list_MathFormulaAnnotation_feature_value"]) {
+              document.getElementById('id_feature_list_MathFormulaAnnotation_feature_value').innerText = data["feature_list_MathFormulaAnnotation_feature_value"];
+            }
+            if (data["feature_list_MathFormulaEditor_feature_value"]) {
+              document.getElementById('id_feature_list_MathFormulaEditor_feature_value').innerText = data["feature_list_MathFormulaEditor_feature_value"];
+            }
+            if (data["feature_list_MathFormulaPoster_feature_value"]) {
+              document.getElementById('id_feature_list_MathFormulaPoster_feature_value').innerText = data["feature_list_MathFormulaPoster_feature_value"];
+            }
+            if (data["feature_list_MathFormulaRender_feature_value"]) {
+              document.getElementById('id_feature_list_MathFormulaRender_feature_value').innerText = data["feature_list_MathFormulaRender_feature_value"];
+            }
         })
         .catch(error => {
           // 处理错误情况
