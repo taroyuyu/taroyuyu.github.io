@@ -18,10 +18,19 @@
     <script type='text/javascript'>
       const button = document.getElementById('checkout-button')
       button.addEventListener('click', event => {
+        var itemsList = [{
+          priceId: 'pri_01j5r0n6ebqerqm1yj2dbthk18',
+          quantity: 1
+        }];
+        
         Paddle.Checkout.open({
-          product: 'pri_01j5r0n6ebqerqm1yj2dbthk18',
-          allowQuantity: false
-        })
+          settings: {
+            displayMode: "overlay",
+            theme: "light",
+            locale: "en"
+          },
+          items: itemsList,
+        });
       })
     </script>
   </body>
