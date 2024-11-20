@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <head>
 	<meta charset="utf-8">
@@ -5,15 +6,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>MathCapture Plugin for Microsoft Word</title>
 	<meta name="title" content="Privacy Policy">
-	<script>
-		// 获取浏览器语言
-		var userLang = navigator.language || navigator.userLanguage;
-		// Check the user's language
-		if (userLang.startsWith('zh')) {
-			// Redirect to the Chinese version of the plugin page
-			window.location.href = 'office_plugin_zh_cn.html';
-		}
-	</script>
 	<style>
 	body, div, li, h1, h2, p
 	{
@@ -181,22 +173,22 @@
 			<h2 id="what-personal-information-we-collect" style="text-align:center;">MathCapture Plugin for Microsoft Word</h2>
 
 			<p>
-				<h3>Method 1: Use MathCaptureBuddy to automatically install the plug-in</h3>
+				<h3>方式一：使用MathCaptureBuddy自动安装插件</h3>
 
 				<ol>
-					<li>Download<a href="/MathCaptureBuddy.zip">MathCaptureBuddy</a></li>
-					<li>Unzip the MathCaptureBuddy.zip</li>
-					<li>Run MathCaptureBuddy</li>
-					<img src="/MathCaptureBuddy/MathCaptureBuddy_6.png" alt="MathCaptureBuddy_6">
-					<li>Click the "Install" button to install the MathCapture plug-in</li>
-					<img src="/MathCaptureBuddy/MathCaptureBuddy_7.png" alt="MathCaptureBuddy_7">
-					<img src="/MathCaptureBuddy/MathCaptureBuddy_8.png" alt="MathCaptureBuddy_8">
-					<li>Restart Microsoft Word, select "Insert -> Object" from the menu, and find MathCapture Equation to insert equations in Microsoft Word.</li>
-					<img src="/MathCaptureBuddy/MicrosoftWord_7.png" alt="MicrosoftWord_7">
-					<img src="/MathCaptureBuddy/MicrosoftWord_8.png" alt="MicrosoftWord_8">
-					<li>If you need to uninstall the MathCapture plug-in, click the "Uninstall" button</li>
-					<img src="/MathCaptureBuddy/MathCaptureBuddy_7.png" alt="MathCaptureBuddy_7">
-					<img src="/MathCaptureBuddy/MathCaptureBuddy_9.png" alt="MathCaptureBuddy_9">
+					<li>下载<a href="/MathCaptureBuddy.zip">MathCaptureBuddy</a></li>
+					<li>解压MathCaptureBuddy.zip</li>
+					<li>运行MathCaptureBuddy</li>
+					<img src="/MathCaptureBuddy/MathCaptureBuddy_1.png" alt="MathCaptureBuddy_1">
+					<li>点击“安装”按钮，从而安装MathCapture插件</li>
+					<img src="/MathCaptureBuddy/MathCaptureBuddy_2.png" alt="MathCaptureBuddy_2">
+					<img src="/MathCaptureBuddy/MathCaptureBuddy_3.png" alt="MathCaptureBuddy_3">
+					<li>重启Microsoft Word，在菜单中选择 "插入->对象”，找到MathCapture Equation，即可在Microsoft Word中插入公式。</li>
+					<img src="/MathCaptureBuddy/MicrosoftWord_5.png" alt="MicrosoftWord_5">
+					<img src="/MathCaptureBuddy/MicrosoftWord_6.png" alt="MicrosoftWord_6">
+					<li>如果需要卸载MathCapture插件，点击“卸载”按钮即可</li>
+					<img src="/MathCaptureBuddy/MathCaptureBuddy_2.png" alt="MathCaptureBuddy_2">
+					<img src="/MathCaptureBuddy/MathCaptureBuddy_3.png" alt="MathCaptureBuddy_4">
 				</ol>
 				<div style="display: flex; justify-content: center;">
 					<video playsinline autoplay muted controls loop src="/MathCaptureBuddy/MathCaptureBuddy _Install.mov" style="width: 66.67vw;"></video>
@@ -204,28 +196,28 @@
 			</p>
 
 			<p>
-				<h3>Method 2: Manual Installation of the Plugin</h3>
+				<h3>方式二：手动安装插件</h3>
 
 				<ol>
-					<li>Download <a href="/MathCaptureBuddy.zip">MathCaptureBuddy</a></li>
-					<li>Unzip the MathCaptureBuddy.zip</li>
-					<li>Right-click on MathCaptureBuddy and select "Show Package Contents"</li>
-					<li id="method2_step4">Navigate to Contents/Resources/Word directory</li>
+					<li>下载<a href="/MathCaptureBuddy.zip">MathCaptureBuddy</a></li>
+					<li>解压MathCaptureBuddy.zip</li>
+					<li>右键点击MathCaptureBuddy，选择“显示包内容”</li>
+					<li id="method2_step4">进入Contents/Resources/Word目录</li>
 					<img src="/MathCaptureBuddy/MathCaptureBuddy_5.png" alt="MathCaptureBuddy_5">
-					<li>Open another Finder window, locate Microsoft Word, right-click on it, and select "Show Package Contents"</li>
-					<li id="method2_step6">Navigate to Contents/SharedSupport/Registries directory</li>
+					<li>打开另一个Finder窗口，找到Microsoft Word，右键点击，选择“显示包内容”</li>
+					<li id="method2_step6">进入Contents/SharedSupport/Registries目录</li>
 					<img src="/MathCaptureBuddy/MicrosoftWord_1.png" alt="MicrosoftWord_1">
-					<li>Copy the MathCapture.reg file in <a href="#method2_step4">step 4</a> to the Registries directory in <a href="#method2_step6">step 6</a></li>
+					<li>将<a href="#method2_step4">第4步中</a>的MathCapture.reg文件复制到<a href="#method2_step6">第6步中</a>的Registries目录下</li>
 					<img src="/MathCaptureBuddy/MicrosoftWord_2.png" alt="MicrosoftWord_2">
-					<li>Open a program called "Terminal"</li>
-					<li>In the Terminal, type mkdir -p /Library/Application\ Support/Microsoft/Office365/User\ Content.localized/Startup.localized/Word， and press Enter</li>
-					<li id="method2_step10">Then in the Terminal, type open open /Library/Application\ Support/Microsoft/Office365/User\ Content.localized/Startup.localized/Word and press Enter</li>
+					<li>打开一个名为“终端”的程序</li>
+					<li>在终端中输入mkdir -p /Library/Application\ Support/Microsoft/Office365/User\ Content.localized/Startup.localized/Word，然后按回车</li>
+					<li id="method2_step10">再在终端中输入open /Library/Application\ Support/Microsoft/Office365/User\ Content.localized/Startup.localized/Word，然后按回车</li>
 					<img src="/MathCaptureBuddy/MicrosoftWord_3.png" alt="MicrosoftWord_3">
-					<li>Copy the MathCaptureWordHelper.bundle file in <a href="#method2_step4">step 4</a> to the directory in <a href="#method2_step10">step 10</a></li>
+					<li>将<a href="#method2_step4">第4步中</a>的MathCaptureWordHelper.bundle文件复制到<a href="#method2_step10">第10步中</a>的目录下</li>
 					<img src="/MathCaptureBuddy/MicrosoftWord_4.png" alt="MicrosoftWord_4">
-					<li>Restart Microsoft Word, select "Insert -> Object" from the menu, and find MathCapture Equation to insert equations in Microsoft Word.</li>
-					<img src="/MathCaptureBuddy/MicrosoftWord_7.png" alt="MicrosoftWord_7">
-					<img src="/MathCaptureBuddy/MicrosoftWord_8.png" alt="MicrosoftWord_8">
+					<li>重启Microsoft Word，在菜单中选择 "插入->对象”，找到MathCapture Equation，即可在Microsoft Word中插入公式。</li>
+					<img src="/MathCaptureBuddy/MicrosoftWord_5.png" alt="MicrosoftWord_5">
+					<img src="/MathCaptureBuddy/MicrosoftWord_6.png" alt="MicrosoftWord_6">
 				</ol>
 			</p>
 		</div>
