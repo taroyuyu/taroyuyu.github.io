@@ -86,7 +86,7 @@
 		align-items:center;
 	}
 	.content-box {
-		max-width:680px;
+		max-width:1024px;
 		margin:0 auto;
 		padding:0 20px;
 	}
@@ -173,52 +173,35 @@
 			<h2 id="what-personal-information-we-collect" style="text-align:center;">MathCapture Plugin for Microsoft Word</h2>
 
 			<p>
-				<h3>方式一：使用MathCaptureBuddy自动安装插件</h3>
+				<h3>为Microsoft Word安装插件</h3>
 
 				<ol>
-					<li>下载<a href="/MathCaptureBuddy.zip">MathCaptureBuddy</a></li>
-					<li>解压MathCaptureBuddy.zip</li>
-					<li>运行MathCaptureBuddy</li>
-					<img src="/MathCaptureBuddy/MathCaptureBuddy_1.png" alt="MathCaptureBuddy_1">
-					<li>点击“安装”按钮，从而安装MathCapture插件</li>
-					<img src="/MathCaptureBuddy/MathCaptureBuddy_2.png" alt="MathCaptureBuddy_2">
-					<img src="/MathCaptureBuddy/MathCaptureBuddy_3.png" alt="MathCaptureBuddy_3">
-					<li>重启Microsoft Word，在菜单中选择 "插入->对象”，找到MathCapture Equation，即可在Microsoft Word中插入公式。</li>
-					<img src="/MathCaptureBuddy/MicrosoftWord_5.png" alt="MicrosoftWord_5">
-					<img src="/MathCaptureBuddy/MicrosoftWord_6.png" alt="MicrosoftWord_6">
-					<li>如果需要卸载MathCapture插件，点击“卸载”按钮即可</li>
-					<img src="/MathCaptureBuddy/MathCaptureBuddy_2.png" alt="MathCaptureBuddy_2">
-					<img src="/MathCaptureBuddy/MathCaptureBuddy_3.png" alt="MathCaptureBuddy_4">
+					<li>下载<a href="/MathCapturePlugin.zip">MathCapturePlugin.zip</a></li>
+					<li>解压MathCapturePlugin.zip，将得到的MathCapturePlugin目录（文件夹）拷贝到 名为“下载（Download）”的目录中</li>
+					<li>打开一个名为“终端”的程序</li>
+					<li>在终端中输入 bash ~/Downloads/MathCapturePlugin/InstallWordPlugin.sh 并按下回车键</li>
+					<li>安装过程中会提示您输入密码，您只需要输入密码即可。密码是您的开机密码。请放心，我们不会获取到您的开机密码，也不存在泄漏您的开机密码的可能性。</li>
+					<li>如果需要卸载插件，只需要在终端中输入 bash ~/Downloads/MathCapturePlugin/UnInstallWordPlugin.sh 并按下回车键</li>
 				</ol>
-				<div style="display: flex; justify-content: center;">
+				<!-- <div style="display: flex; justify-content: center;">
 					<video playsinline autoplay muted controls loop src="/MathCaptureBuddy/MathCaptureBuddy _Install.mov" style="width: 66.67vw;"></video>
-				</div>
+				</div> -->
 			</p>
 
 			<p>
-				<h3>方式二：手动安装插件</h3>
+				<h3>为Microsoft PowerPoint安装插件</h3>
 
 				<ol>
-					<li>下载<a href="/MathCaptureBuddy.zip">MathCaptureBuddy</a></li>
-					<li>解压MathCaptureBuddy.zip</li>
-					<li>右键点击MathCaptureBuddy，选择“显示包内容”</li>
-					<li id="method2_step4">进入Contents/Resources/Word目录</li>
-					<img src="/MathCaptureBuddy/MathCaptureBuddy_5.png" alt="MathCaptureBuddy_5">
-					<li>打开另一个Finder窗口，找到Microsoft Word，右键点击，选择“显示包内容”</li>
-					<li id="method2_step6">进入Contents/SharedSupport/Registries目录</li>
-					<img src="/MathCaptureBuddy/MicrosoftWord_1.png" alt="MicrosoftWord_1">
-					<li>将<a href="#method2_step4">第4步中</a>的MathCapture.reg文件复制到<a href="#method2_step6">第6步中</a>的Registries目录下</li>
-					<img src="/MathCaptureBuddy/MicrosoftWord_2.png" alt="MicrosoftWord_2">
+					<li>下载<a href="/MathCapturePlugin.zip">MathCapturePlugin.zip</a></li>
+					<li>解压MathCapturePlugin.zip，将得到的MathCapturePlugin目录（文件夹）拷贝到 名为“下载（Download）”的目录中</li>
 					<li>打开一个名为“终端”的程序</li>
-					<li>在终端中输入mkdir -p /Library/Application\ Support/Microsoft/Office365/User\ Content.localized/Startup.localized/Word，然后按回车</li>
-					<li id="method2_step10">再在终端中输入open /Library/Application\ Support/Microsoft/Office365/User\ Content.localized/Startup.localized/Word，然后按回车</li>
-					<img src="/MathCaptureBuddy/MicrosoftWord_3.png" alt="MicrosoftWord_3">
-					<li>将<a href="#method2_step4">第4步中</a>的MathCaptureWordHelper.bundle文件复制到<a href="#method2_step10">第10步中</a>的目录下</li>
-					<img src="/MathCaptureBuddy/MicrosoftWord_4.png" alt="MicrosoftWord_4">
-					<li>重启Microsoft Word，在菜单中选择 "插入->对象”，找到MathCapture Equation，即可在Microsoft Word中插入公式。</li>
-					<img src="/MathCaptureBuddy/MicrosoftWord_5.png" alt="MicrosoftWord_5">
-					<img src="/MathCaptureBuddy/MicrosoftWord_6.png" alt="MicrosoftWord_6">
+					<li>在终端中输入 bash ~/Downloads/MathCapturePlugin/InstallPowerPointPlugin.sh 并按下回车键</li>
+					<li>安装过程中会提示您输入密码，您只需要输入密码即可。密码是您的开机密码。请放心，我们不会获取到您的开机密码，也不存在泄漏您的开机密码的可能性。</li>
+					<li>如果需要卸载插件，只需要在终端中输入 bash ~/Downloads/MathCapturePlugin/UnInstallPowerPointPlugin.sh 并按下回车键</li>
 				</ol>
+				<!-- <div style="display: flex; justify-content: center;">
+					<video playsinline autoplay muted controls loop src="/MathCaptureBuddy/MathCaptureBuddy _Install.mov" style="width: 66.67vw;"></video>
+				</div> -->
 			</p>
 		</div>
 	</div>
