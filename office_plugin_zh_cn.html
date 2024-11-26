@@ -170,20 +170,22 @@
 <body>
 	<div class="content-box">
 		<div class="main">
-			<h2 id="what-personal-information-we-collect" style="text-align:center;">MathCapture Plugin for Microsoft Office</h2>
+			<h2 id="what-personal-information-we-collect" style="text-align:center;">适用于 Microsoft Office 的 MathCapture 插件</h2>
 
-			<p>
+			<p style="background-color: antiquewhite;">
 				如果插件安装失败或者插件安装之后，无法在Microsoft Word和PowerPoint中调用MathCapture插入公式，请与我们联系。我们将竭尽全力协助您安装好插件。<br/>
 				后续我们会继续完善插件的安装教程，请您给我们一些时间。<br/>
 				联系方式：
-				<ul>
+				<ul style="background-color: antiquewhite;">
 					<li>电子邮件:taroyuyu@icloud.com</li>
 					<li>微信:MathCaptureTech</li>
 				</ul>
 			</p>
 			<p>
-				<h3>为Microsoft Word安装插件</h3>
-
+				<h3>为Microsoft Word安装插件（方式一：自动安装）</h3>
+				<p style="background-color: pink;">
+					根据反馈，这种安装方式大概率会失败。如果安装失败，请参考第二种安装方式
+				</p>
 				<ol>
 					<li>下载<a href="/MathCapturePlugin.zip">MathCapturePlugin.zip</a></li>
 					<li>解压MathCapturePlugin.zip，将得到的MathCapturePlugin目录（文件夹）拷贝到 名为“下载（Download）”的目录中</li>
@@ -198,8 +200,55 @@
 			</p>
 
 			<p>
-				<h3>为Microsoft PowerPoint安装插件</h3>
+				<h3>为Microsoft Word安装插件（方式二：手动安装）</h3>
+				<ol>
+					<li>下载<a href="/MathCapturePlugin.zip">MathCapturePlugin.zip</a></li>
+					<li id="#microsoft_word_method2_step2">解压MathCapturePlugin.zip，将得到的MathCapturePlugin目录（文件夹）拷贝到 名为“下载（Download）”的目录中</li>
+					<li>打开另一个 Finder（中文名 访达） 窗口，找到 Microsoft Word，右键单击它，然后选择“显示包内容”</li>
+					<img src="/MathCaptureBuddy/MicrosoftWord01.png" alt="MicrosoftWord01">
+					<img src="/MathCaptureBuddy/MicrosoftWord02.png" alt="MicrosoftWord02">
+					<li id="microsoft_word_method2_step4">进入 Contents/SharedSupport/Registries 目录</li>
+					<img src="/MathCaptureBuddy/MicrosoftWord03.png" alt="MicrosoftWord03">
+					<div style="display: flex; justify-content: center;">
+						<video playsinline autoplay muted controls loop src="/MathCaptureBuddy/MicrosoftWord03.mov" style="width: 46.67vw;"></video>
+					</div>
+					<li>将<a href="#microsoft_word_method2_step2">第2步</a>得到的目录（MathCapturePlugin）中的Word/MathCapture.reg文件拷贝/移动到<a href="#microsoft_word_method2_step4">第4步</a>的Registries目录中</li>
+					<p style="background-color:burlywood">
+						拷贝/移动过程中会提示您输入密码，您只需要输入密码即可。密码是您的开机密码。请放心，我们不会获取到您的开机密码，也不存在泄漏您的开机密码的可能性。
+					</p>
+					<div style="display: flex; justify-content: center;">
+						<video playsinline autoplay muted controls loop src="/MathCaptureBuddy/MicrosoftWord04.mov" style="width: 46.67vw;"></video>
+					</div>
+					<li>打开一个名为“Terminal（中文名 终端）”的程序</li>
+					<div style="display: flex; justify-content: center;">
+						<video playsinline autoplay muted controls loop src="/MathCaptureBuddy/MicrosoftWord05.mov" style="width: 46.67vw;"></video>
+					</div>
+					<li>在终端中输入 mkdir -p /Library/Application\ Support/Microsoft/Office365/User\ Content.localized/Startup.localized/Word 并按下回车键</li>
+					<li id="microsoft_word_method2_step8">接着，再在终端中输入 open /Library/Application\ Support/Microsoft/Office365/User\ Content.localized/Startup.localized/Word 并按下回车键</li>
+					<div style="display: flex; justify-content: center;">
+						<video playsinline autoplay muted controls loop src="/MathCaptureBuddy/MicrosoftWord06.mov" style="width: 46.67vw;"></video>
+					</div>
+					<li>将<a href="#microsoft_word_method2_step2">第2步</a>得到的目录（MathCapturePlugin）中的Word/MathCaptureWordHelper.bundle文件拷贝/移动到<a href="#microsoft_word_method2_step8">第8步</a>的Word目录中</li>
+					<p style="background-color:burlywood">
+						拷贝/移动过程中会提示您输入密码，您只需要输入密码即可。密码是您的开机密码。请放心，我们不会获取到您的开机密码，也不存在泄漏您的开机密码的可能性。
+					</p>
+					<div style="display: flex; justify-content: center;">
+						<video playsinline autoplay muted controls loop src="/MathCaptureBuddy/MicrosoftWord07.mov" style="width: 46.67vw;"></video>
+					</div>
+					<li>重新启动 Microsoft Word，从菜单中选择“插入 -> 对象”，然后找到 MathCapture Equation 即可 Microsoft Word 中插入方程式。</li>
+					<img src="/MathCaptureBuddy/MicrosoftWord08.png" alt="MicrosoftWord08">
+					<img src="/MathCaptureBuddy/MicrosoftWord09.png" alt="MicrosoftWord09">
+					<div style="display: flex; justify-content: center;">
+						<video playsinline autoplay muted controls loop src="/MathCaptureBuddy/MicrosoftWord10.mov" style="width: 46.67vw;"></video>
+					</div>
+				</ol>
+			</p>
 
+			<p>
+				<h3>为Microsoft PowerPoint安装插件（方式一：自动安装）</h3>
+				<p style="background-color: pink;">
+					根据反馈，这种安装方式大概率会失败。如果安装失败，请参考第二种安装方式
+				</p>
 				<ol>
 					<li>下载<a href="/MathCapturePlugin.zip">MathCapturePlugin.zip</a></li>
 					<li>解压MathCapturePlugin.zip，将得到的MathCapturePlugin目录（文件夹）拷贝到 名为“下载（Download）”的目录中</li>
