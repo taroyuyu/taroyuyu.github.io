@@ -15,217 +15,273 @@
 		}
 	</script>
 	<style>
-	body, div, li, h1, h2, p
-	{
-		margin:0;
-		padding:0;
-	}
-	li {
-		margin-bottom:6px;
-	}
-	body {
-		font-family:Arial,"Lucida Grande",sans-serif;
-		color:#333;
-		font-size:15px;
-		line-height:1.8em;
-		-webkit-font-smoothing:antialiased;
-	}
-	img {
-		display:block;
-		width:100%;
-	}
-	a {
-		color:#4285f4;
-		text-decoration:none;
-	}
-	a:hover {
-		text-decoration:underline;
-	}
-	h1 {
-		font-size:28px;
-	}
-	h1, h2 {
-		font-weight:normal;
-		margin-bottom:16px;
-	}
-	h2 {
-		margin-top:25px;
-		margin-bottom:10px;
-	}
-	p {
-		margin-bottom:14px;
-	}
-	p a:hover {
-		text-decoration:underline;
-	}
-	span {
-		background:#eee;
-		border:1px solid #ccc;
-		border-radius:2px;
-		padding:0 3px;
-		padding-bottom:1px;
-		margin:0 4px;
-		font-size:14px;
-		font-family:monospace;
-	}
-	.header {
-		padding:26px 0;
-		border-bottom:1px solid #eaeaea;
-	}
-	.main {
-		margin-top:35px;
-		margin-bottom:70px;
-		min-height:180px;
-	}
-	.footer {
-		border-top:1px solid #eaeaea;
-		text-align:center;
-		padding-top:15px;
-		padding-bottom:35px;
-		font-size:13px;
-	}
-	.flex {
-		display:flex;
-	}
-	.flex-box {
-		flex:1;
-	}
-	.flex-center {
-		align-items:center;
-	}
-	.content-box {
-		max-width:680px;
-		margin:0 auto;
-		padding:0 20px;
-	}
-	.icon {
-		display:block;
-		width:32px;
-		height:32px;
-		background-image:url(assets/icon64.png);
-		background-size:100%;
-	}
-	.nav-links {
-		margin:0;
-		padding:0;
-	}
-	.nav-links li {
-		display:inline-block;
-		margin:0;
-	}
-	.nav-links a {
-		color:inherit;
-	}
-	.header-links {
-		font-size:17px;
-	}
-	.header-links li:after {
-		content:"/";
-		padding-left:15px;
-		padding-right:10px;
-		color:#000;
-	}
-	.header-links li a:hover {
-		text-decoration:underline;
-	}
-	.header-links li:last-child:after {
-		content:"";
-		padding:0;
-	}
-	.footer-links li {
-		color:#777;
-		margin:0 6px;
-	}
-	.button-wrap {
-		text-align:center;
-		margin-top:50px;
-		margin-bottom:40px;
-	}
-	.button {
-	    display: inline-block;
-	    color: #fff;
-	    background-color: #4285f4;
-	    border-radius: 4px;
-	    text-transform: uppercase;
-	    min-width: 152px;
-	    line-height: 24px;
-	    padding: 12px 24px;
-		padding-bottom:10px;
-	    user-select:none;
-		font-size:14px;
-		font-weight:bold;
-	}
-	.img-wrap {
-		margin:25px 0;
-	}
-	
-	@media (max-width:480px) {
+		body, div, li, h1, h2, p
+		{
+			margin:0;
+			padding:0;
+		}
+		li {
+			margin-bottom:6px;
+		}
+		body {
+			font-family:Arial,"Lucida Grande",sans-serif;
+			color:#333;
+			font-size:15px;
+			line-height:1.8em;
+			-webkit-font-smoothing:antialiased;
+		}
+		img {
+			display:block;
+			width:100%;
+		}
+		a {
+			color:#4285f4;
+			text-decoration:none;
+		}
+		a:hover {
+			text-decoration:underline;
+		}
 		h1 {
-			font-size:24px;
+			font-size:28px;
+		}
+		h1, h2 {
+			font-weight:normal;
+			margin-bottom:16px;
 		}
 		h2 {
-			font-size:20px;
+			margin-top:25px;
+			margin-bottom:10px;
+		}
+		p {
+			margin-bottom:14px;
+		}
+		p a:hover {
+			text-decoration:underline;
+		}
+		span {
+			background:#eee;
+			border:1px solid #ccc;
+			border-radius:2px;
+			padding:0 3px;
+			padding-bottom:1px;
+			margin:0 4px;
+			font-size:14px;
+			font-family:monospace;
+		}
+		.header {
+			padding:26px 0;
+			border-bottom:1px solid #eaeaea;
 		}
 		.main {
-			padding-top:5px;
+			margin-top:35px;
+			margin-bottom:70px;
+			min-height:180px;
+		}
+		.footer {
+			border-top:1px solid #eaeaea;
+			text-align:center;
+			padding-top:15px;
+			padding-bottom:35px;
+			font-size:13px;
+		}
+		.flex {
+			display:flex;
+		}
+		.flex-box {
+			flex:1;
+		}
+		.flex-center {
+			align-items:center;
+		}
+		.content-box {
+			max-width:1200px;
+			margin:0 auto;
+			padding:0 20px;
+		}
+		.icon {
+			display:block;
+			width:32px;
+			height:32px;
+			background-image:url(assets/icon64.png);
+			background-size:100%;
+		}
+		.nav-links {
+			margin:0;
+			padding:0;
+		}
+		.nav-links li {
+			display:inline-block;
+			margin:0;
+		}
+		.nav-links a {
+			color:inherit;
+		}
+		.header-links {
+			font-size:17px;
+		}
+		.header-links li:after {
+			content:"/";
+			padding-left:15px;
+			padding-right:10px;
+			color:#000;
+		}
+		.header-links li a:hover {
+			text-decoration:underline;
+		}
+		.header-links li:last-child:after {
+			content:"";
+			padding:0;
+		}
+		.footer-links li {
+			color:#777;
+			margin:0 6px;
+		}
+		.button-wrap {
+			text-align:center;
+			margin-top:50px;
+			margin-bottom:40px;
+		}
+		.button {
+			display: inline-block;
+			color: #fff;
+			background-color: #4285f4;
+			border-radius: 4px;
+			text-transform: uppercase;
+			min-width: 152px;
+			line-height: 24px;
+			padding: 12px 24px;
+			padding-bottom:10px;
+			user-select:none;
+			font-size:14px;
+			font-weight:bold;
 		}
 		.img-wrap {
-			margin:20px -20px;
+			margin:25px 0;
 		}
-	}
-	</style>
+		
+		@media (max-width:480px) {
+			h1 {
+				font-size:24px;
+			}
+			h2 {
+				font-size:20px;
+			}
+			.main {
+				padding-top:5px;
+			}
+			.img-wrap {
+				margin:20px -20px;
+			}
+		}
+		</style>
 </head>
 <body>
 	<div class="content-box">
 		<div class="main">
-			<h2 id="what-personal-information-we-collect" style="text-align:center;">MathCapture Plugin for Microsoft Word</h2>
+			<h2 id="what-personal-information-we-collect" style="text-align:center;">MathCapture Plugin for Microsoft Office</h2>
 
-			<p>
-				<h3>Method 1: Use MathCaptureBuddy to automatically install the plug-in</h3>
-
-				<ol>
-					<li>Download<a href="/MathCaptureBuddy.zip">MathCaptureBuddy</a></li>
-					<li>Unzip the MathCaptureBuddy.zip</li>
-					<li>Run MathCaptureBuddy</li>
-					<img src="/MathCaptureBuddy/MathCaptureBuddy_6.png" alt="MathCaptureBuddy_6">
-					<li>Click the "Install" button to install the MathCapture plug-in</li>
-					<img src="/MathCaptureBuddy/MathCaptureBuddy_7.png" alt="MathCaptureBuddy_7">
-					<img src="/MathCaptureBuddy/MathCaptureBuddy_8.png" alt="MathCaptureBuddy_8">
-					<li>Restart Microsoft Word, select "Insert -> Object" from the menu, and find MathCapture Equation to insert equations in Microsoft Word.</li>
-					<img src="/MathCaptureBuddy/MicrosoftWord_7.png" alt="MicrosoftWord_7">
-					<img src="/MathCaptureBuddy/MicrosoftWord_8.png" alt="MicrosoftWord_8">
-					<li>If you need to uninstall the MathCapture plug-in, click the "Uninstall" button</li>
-					<img src="/MathCaptureBuddy/MathCaptureBuddy_7.png" alt="MathCaptureBuddy_7">
-					<img src="/MathCaptureBuddy/MathCaptureBuddy_9.png" alt="MathCaptureBuddy_9">
-				</ol>
-				<div style="display: flex; justify-content: center;">
-					<video playsinline autoplay muted controls loop src="/MathCaptureBuddy/MathCaptureBuddy _Install.mov" style="width: 66.67vw;"></video>
-				</div>
+			<p style="background-color: antiquewhite;">
+				If the plugin installation fails or you are unable to use MathCapture to insert equations in Microsoft Word or PowerPoint after installation, please contact us. We will do our best to assist you in getting the plugin installed properly. We are also working on improving the installation guide. email:taroyuyu@icloud.com
 			</p>
 
 			<p>
-				<h3>Method 2: Manual Installation of the Plugin</h3>
+				<h3>Install the MathCapture plug-in for Microsoft Word</h3>
 
 				<ol>
-					<li>Download <a href="/MathCaptureBuddy.zip">MathCaptureBuddy</a></li>
-					<li>Unzip the MathCaptureBuddy.zip</li>
-					<li>Right-click on MathCaptureBuddy and select "Show Package Contents"</li>
-					<li id="method2_step4">Navigate to Contents/Resources/Word directory</li>
-					<img src="/MathCaptureBuddy/MathCaptureBuddy_5.png" alt="MathCaptureBuddy_5">
+					<li>Download<a href="/MathCapturePlugin.zip">MathCapturePlugin.zip</a></li>
+					<li id="microsoft_word_method2_step2">Extract MathCapturePlugin.zip, and move the extracted MathCapturePlugin folder to the directory named "Downloads".</li>
 					<li>Open another Finder window, locate Microsoft Word, right-click on it, and select "Show Package Contents"</li>
-					<li id="method2_step6">Navigate to Contents/SharedSupport/Registries directory</li>
-					<img src="/MathCaptureBuddy/MicrosoftWord_1.png" alt="MicrosoftWord_1">
-					<li>Copy the MathCapture.reg file in <a href="#method2_step4">step 4</a> to the Registries directory in <a href="#method2_step6">step 6</a></li>
-					<img src="/MathCaptureBuddy/MicrosoftWord_2.png" alt="MicrosoftWord_2">
+					<img src="/office_plugin/resource/en/MicrosoftWord01.png" alt="MicrosoftWord01">
+					<img src="/office_plugin/resource/en/MicrosoftWord02.png" alt="MicrosoftWord02">
+					<li id="microsoft_word_method2_step4">Navigate to Contents/SharedSupport/Registries directory</li>
+					<img src="/office_plugin/resource/en/MicrosoftWord03.png" alt="MicrosoftWord03">
+					<div style="display: flex; justify-content: center;">
+						<video playsinline autoplay muted controls loop src="/office_plugin/resource/en/MicrosoftWord03.mov" style="width: 46.67vw;"></video>
+					</div>
+					<li>Copy/move the Word/MathCapture.reg file in the directory (MathCapturePlugin) obtained in <a href="#microsoft_word_method2_step2">step 2</a> to the Registries directory in <a href="#microsoft_word_method2_step4">step 4</a></li>
+					<p style="background-color:burlywood">
+						During the copy/move process, you will be prompted to enter your password. Simply enter your login password when prompted. Rest assured, we do not have access to your login password, and there is no risk of it being leaked.
+					</p>
+					<div style="display: flex; justify-content: center;">
+						<video playsinline autoplay muted controls loop src="/office_plugin/resource/en/MicrosoftWord04.mov" style="width: 46.67vw;"></video>
+					</div>
 					<li>Open a program called "Terminal"</li>
-					<li>In the Terminal, type mkdir -p /Library/Application\ Support/Microsoft/Office365/User\ Content.localized/Startup.localized/Word， and press Enter</li>
-					<li id="method2_step10">Then in the Terminal, type open open /Library/Application\ Support/Microsoft/Office365/User\ Content.localized/Startup.localized/Word and press Enter</li>
-					<img src="/MathCaptureBuddy/MicrosoftWord_3.png" alt="MicrosoftWord_3">
-					<li>Copy the MathCaptureWordHelper.bundle file in <a href="#method2_step4">step 4</a> to the directory in <a href="#method2_step10">step 10</a></li>
-					<img src="/MathCaptureBuddy/MicrosoftWord_4.png" alt="MicrosoftWord_4">
+					<li>In the Terminal, type the following content， and press Enter<br/><span style="color: blue;">sudo mkdir -p /Library/Application\ Support/Microsoft/Office365/User\ Content.localized/Startup.localized/Word</span></li>
+					<li id="microsoft_word_method2_step8">Then in the Terminal, type the following content， and press Enter<br/><span style="color: blue;">open /Library/Application\ Support/Microsoft/Office365/User\ Content.localized/Startup.localized/Word</span></li>
+					<div style="display: flex; justify-content: center;">
+						<video playsinline autoplay muted controls loop src="/office_plugin/resource/en/MicrosoftWord06.mov" style="width: 46.67vw;"></video>
+					</div>
+					<li>Copy/move the Word/MathCaptureWordHelper.bundle file in the directory (MathCapturePlugin) obtained in <a href="#microsoft_word_method2_step2">step 2</a> to the Word directory in <a href="#microsoft_word_method2_step8">step 8</a></li>
+					<p style="background-color:burlywood">
+						During the copy/move process, you will be prompted to enter your password. Simply enter your login password when prompted. Rest assured, we do not have access to your login password, and there is no risk of it being leaked.
+					</p>
+					<div style="display: flex; justify-content: center;">
+						<video playsinline autoplay muted controls loop src="/office_plugin/resource/en/MicrosoftWord07.mov" style="width: 46.67vw;"></video>
+					</div>
 					<li>Restart Microsoft Word, select "Insert -> Object" from the menu, and find MathCapture Equation to insert equations in Microsoft Word.</li>
 					<img src="/MathCaptureBuddy/MicrosoftWord_7.png" alt="MicrosoftWord_7">
 					<img src="/MathCaptureBuddy/MicrosoftWord_8.png" alt="MicrosoftWord_8">
+					<div style="display: flex; justify-content: center;">
+						<video playsinline autoplay muted controls loop src="/office_plugin/resource/en/MicrosoftWord10.mov" style="width: 46.67vw;"></video>
+					</div>
+				</ol>
+			</p>
+
+			<p>
+				<h3>Install the MathCapture plug-in for Microsoft PowerPoint</h3>
+
+				<ol>
+					<li>Download<a href="/MathCapturePlugin.zip">MathCapturePlugin.zip</a></li>
+					<li id="microsoft_powerpoint_method2_step2">Extract MathCapturePlugin.zip, and move the extracted MathCapturePlugin folder to the directory named "Downloads".</li>
+					<li>Open another Finder window, locate Microsoft PowerPoint, right-click on it, and select "Show Package Contents"</li>
+					<img src="/office_plugin/resource/en/PowerPoint01.png" alt="PowerPoint01">
+					<img src="/office_plugin/resource/en/PowerPoint02.png" alt="PowerPoint02">
+					<li id="microsoft_powerpoint_method2_step4">Navigate to Contents/SharedSupport/Registries directory</li>
+					<img src="/office_plugin/resource/en/PowerPoint03.png" alt="PowerPoint03">
+					<div style="display: flex; justify-content: center;">
+						<video playsinline autoplay muted controls loop src="/office_plugin/resource/en/PowerPoint04.mov" style="width: 46.67vw;"></video>
+					</div>
+					<li>Copy/move the PowerPoint/MathCapture.reg file in the directory (MathCapturePlugin) obtained in <a href="#microsoft_powerpoint_method2_step2">step 2</a> to the Registries directory in <a href="#microsoft_powerpoint_method2_step4">step 4</a></li>
+					<p style="background-color:burlywood">
+						During the copy/move process, you will be prompted to enter your password. Simply enter your login password when prompted. Rest assured, we do not have access to your login password, and there is no risk of it being leaked.
+					</p>
+					<div style="display: flex; justify-content: center;">
+						<video playsinline autoplay muted controls loop src="/office_plugin/resource/en/PowerPoint05.mov" style="width: 46.67vw;"></video>
+					</div>
+					<li>Open a program called "Terminal"</li>
+					<li>In the Terminal, type the following content， and press Enter<br/><span style="color: blue;">sudo mkdir -p /Library/Application\ Support/Microsoft/Office365/User\ Content.localized/Startup.localized/PowerPoint</span></li>
+					<li id="microsoft_powerpoint_method2_step8">Then in the Terminal, type the following content， and press Enter<br/><span style="color: blue;">open /Library/Application\ Support/Microsoft/Office365/User\ Content.localized/Startup.localized/PowerPoint</span></li>
+					<div style="display: flex; justify-content: center;">
+						<video playsinline autoplay muted controls loop src="/office_plugin/resource/en/PowerPoint06.mov" style="width: 46.67vw;"></video>
+					</div>
+					<li>Copy/move the PowerPoint/MathCaptureHelper.bundle and PowerPoint/MathCaptureHelper.ppam files in the directory (MathCapturePlugin) obtained in <a href="#microsoft_powerpoint_method2_step4">step 2</a> to the PowerPoint directory in <a href="#microsoft_powerpoint_method2">step 8</a></li>
+					<p style="background-color:burlywood">
+						During the copy/move process, you will be prompted to enter your password. Simply enter your login password when prompted. Rest assured, we do not have access to your login password, and there is no risk of it being leaked.
+					</p>
+					<div style="display: flex; justify-content: center;">
+						<video playsinline autoplay muted controls loop src="/office_plugin/resource/en/PowerPoint07.mov" style="width: 46.67vw;"></video>
+					</div>
+					<li>Restart Microsoft PowerPoint, select "Insert -> Object" from the menu, and find MathCapture Equation to insert equations in Microsoft PowerPoint.</li>
+					<img src="/office_plugin/resource/en/PowerPoint08.png" alt="PowerPoint08">
+					<img src="/office_plugin/resource/en/PowerPoint09.png" alt="PowerPoint09">
+					<div style="display: flex; justify-content: center;">
+						<video playsinline autoplay muted controls loop src="/office_plugin/resource/en/PowerPoint10.mov" style="width: 46.67vw;"></video>
+					</div>
+				</ol>
+			</p>
+
+			<p>
+				<h3>Frequently asked questions</h3>
+				<img src="/office_plugin/resource/en/PluginError01.png" alt="PluginError01">
+				<ol>
+					<li>Open System Preferences Settings</a></li>
+					<li>Click Security & Privacy</li>
+					<img src="/office_plugin/resource/en/PluginError02.png" alt="PluginError02">
+					<li>As shown in the figure below, click "Allow Anyway"</li>
+					<img src="/office_plugin/resource/en/PluginError03.png" alt="PluginError03">
+					<li>Exit Word/PowerPoint and restart Word/PowerPoint</li>
+					<li>Click "Open" as shown below.</li>
+					<img src="/office_plugin/resource/en/PluginError04.png" alt="PluginError04">
 				</ol>
 			</p>
 		</div>
