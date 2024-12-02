@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <head>
 	<meta charset="utf-8">
@@ -165,9 +164,47 @@
 			margin:20px -20px;
 		}
 	}
+	/* Floating outline styles */
+	.floating-outline {
+		position: fixed;
+		top: 10px;
+		right: 10px;
+		background-color: #fff;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+		padding: 10px;
+		z-index: 1000;
+	}
+	.floating-outline h3 {
+		font-size: 16px;
+		margin-bottom: 10px;
+	}
+	.floating-outline ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+	.floating-outline ul li {
+		margin-bottom: 6px;
+	}
+	.floating-outline ul li a {
+		color: #4285f4;
+		text-decoration: none;
+	}
+	.floating-outline ul li a:hover {
+		text-decoration: underline;
+	}
 	</style>
 </head>
 <body>
+	<div class="floating-outline">
+		<ul>
+			<li><a href="#install-word-plugin">为Microsoft Word安装插件</a></li>
+			<li><a href="#install-powerpoint-plugin">为Microsoft PowerPoint安装插件</a></li>
+			<li><a href="#faq">常见问题</a></li>
+		</ul>
+	</div>
 	<div class="content-box">
 		<div class="main">
 			<h2 id="what-personal-information-we-collect" style="text-align:center;">适用于 Microsoft Office 的 MathCapture 插件</h2>
@@ -185,7 +222,7 @@
 			<p style="background-color: antiquewhite;">
 				我们近期正在积极开发Word插件，请给我们一些时间。我们争取在十二月底之前放出第二版的Word和PowerPoint插件。
 			</p>
-			<p>
+			<p id="install-word-plugin">
 				<h3>为Microsoft Word安装插件</h3>
 				<ol>
 					<li>下载<a href="/MathCapturePluginForWord.pkg">MathCapturePluginForWord.pkg</a></li>
@@ -209,7 +246,7 @@
 				</ol>
 			</p>
 
-			<p>
+			<p id="install-powerpoint-plugin">
 				<h3>为Microsoft PowerPoint安装插件</h3>
 				<ol>
 					<li>下载<a href="/MathCapturePluginForPowerPoint.pkg">MathCapturePluginForPowerPoint.pkg</a></li>
@@ -233,7 +270,7 @@
 				</ol>
 			</p>
 
-			<p>
+			<p id="faq">
 				<h3>常见问题</h3>
 				<img src="/PluginError01.png" alt="PluginError01"><br/>
 				或者<br>
@@ -253,4 +290,3 @@
 		</div>
 	</div>
 </body>
-
