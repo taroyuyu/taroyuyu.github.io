@@ -217,7 +217,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script>
       function loadContent(url) {
-        document.getElementById('content-frame').src = url;
+        var iframe = document.getElementById('content-frame');
+        iframe.src = url;
       }
 
       function setActive(element) {
@@ -230,6 +231,19 @@
         // Add active class to the clicked nav link
         element.classList.add('active');
       }
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(function(navLink) {
+          navLink.addEventListener('click', function(event) {
+            event.preventDefault();
+            var url = this.getAttribute('href');
+            if (url !== '#') {
+              loadContent(url);
+            }
+          });
+        });
+      });
     </script>
   </body>
 </html>
