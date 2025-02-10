@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>MathCapture使用教程</title>
+    <style>
+      .sidebar {
+        height: 100vh; /* Make the sidebar occupy the full height of the viewport */
+        background-color: #f8f9fa; /* Ensure the background color is consistent */
+        overflow-y: auto; /* Add vertical scrolling */
+      }
+      .nav .nav-item .nav-link {
+        padding-left: 1.5rem; /* Indent for sub-sections */
+        font-size: 0.775rem; /* Smaller font size */
+        color: black; /* Set text color to black */
+      }
+      .nav .nav-item .nav-link:hover {
+        color: orange; /* Highlight text color to orange on hover */
+      }
+      .nav .nav-item .nav-link.chapter {
+        padding-left: 0.75rem; /* Less indent for main chapters */
+        font-weight: bold; /* Highlight main chapters */
+        font-size: 0.775rem; /* Smaller font size */
+        color: black; /* Set text color to black */
+      }
+      .nav .nav-item .nav-link.chapter:hover {
+        color: orange; /* Highlight text color to orange on hover */
+      }
+      .nav .nav-item .nav-link.sub-item {
+        padding-left: 3rem; /* More indent for sub-items */
+        font-size: 0.775rem; /* Smaller font size */
+        color: black; /* Set text color to black */
+      }
+      .nav .nav-item .nav-link.sub-item:hover {
+        color: orange; /* Highlight text color to orange on hover */
+      }
+      .nav .nav-item .nav-link.sub-sub-item {
+        padding-left: 4.5rem; /* More indent for sub-sub-items */
+        font-size: 0.775rem; /* Smaller font size */
+        color: black; /* Set text color to black */
+      }
+      .nav .nav-item .nav-link.sub-sub-item:hover {
+        color: orange; /* Highlight text color to orange on hover */
+      }
+      .nav .nav-item .nav-link.active {
+        color: orange; /* Set text color to orange for active link */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+          <div class="sidebar-sticky">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link chapter" href="https://www.mathcapture.tech" onclick="setActive(this)">
+                  首页
+                </a>
+              </li>
+              <!-- 公式编辑器 -->
+              <li class="nav-item">
+                <span class="nav-link chapter">
+                  公式编辑器
+                </span>
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link">编辑数学公式</a>
+                    <ul class="nav flex-column">
+                      <li class="nav-item">
+                        <a class="nav-link sub-item active" href="#" onclick="setActive(this); loadContent('常规体_斜体_粗体_粗斜体.html')">常规体、斜体、粗体、粗斜体</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link sub-item" href="#" onclick="setActive(this); loadContent('空格.html')">空格</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link sub-item">常用公式模板</a>
+                        <ul class="nav flex-column">
+                          <li class="nav-item">
+                            <a class="nav-link sub-sub-item" href="#" onclick="setActive(this); loadContent('大型运算符.html')">大型运算符</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link sub-sub-item" href="#" onclick="setActive(this); loadContent('矩阵.html')">矩阵</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link sub-sub-item" href="#" onclick="setActive(this); loadContent('分段函数.html')">分段函数</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="setActive(this); loadContent('导出数学公式图像.html')">导出数学公式图像</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link">在Microsoft Word中插入和编辑公式</a>
+                    <ul class="nav flex-column">
+                      <li class="nav-item">
+                        <a class="nav-link sub-item" href="#" onclick="setActive(this); loadContent('安装适用于Microsoft Word的MathCapture插件.html')">安装适用于Microsoft Word的MathCapture插件</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link sub-item" href="#" onclick="setActive(this); loadContent('在MicrosoftWord中插入公式.html')">插入公式</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link sub-item" href="#" onclick="setActive(this); loadContent('在MicrosoftWord中编辑公式.html')">编辑公式</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link sub-item" href="#" onclick="setActive(this); loadContent('MicrosoftWord行内公式排版.html')">行内公式排版</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link sub-item" href="#" onclick="setActive(this); loadContent('MicrosoftWord非行内公式编号.html')">非行内公式编号</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link">在Microsoft PowerPoint中插入和编辑公式</a>
+                    <ul class="nav flex-column">
+                      <li class="nav-item">
+                        <a class="nav-link sub-item" href="#" onclick="setActive(this); loadContent('安装适用于Microsoft PowerPoint的MathCapture插件.html')">安装适用于Microsoft PowerPoint的MathCapture插件</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link sub-item" href="#" onclick="setActive(this); loadContent('MicrosoftPowerPoint插入公式.html')">插入公式</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link sub-item" href="#" onclick="setActive(this); loadContent('MicrosoftPowerPoint编辑公式.html')">编辑公式</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link">在WPS Office中插入和编辑公式</a>
+                    <ul class="nav flex-column">
+                      <li class="nav-item">
+                        <a class="nav-link sub-item" href="#" onclick="setActive(this); loadContent('WPS插入公式.html')">插入公式</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link sub-item" href="#" onclick="setActive(this); loadContent('WPS行内公式排版.html')">行内公式排版</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link sub-item" href="#" onclick="setActive(this); loadContent('WPS非行内公式编号.html')">非行内公式编号</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link">在Pages中插入和编辑公式</a>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                          <a class="nav-link sub-item" href="#" onclick="setActive(this); loadContent('Pages插入公式.html')">插入公式</a>
+                        </li>
+                    </ul>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link">在Keynote中插入和编辑公式</a>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                          <a class="nav-link sub-item" href="#" onclick="setActive(this); loadContent('Keynote插入公式.html')">插入公式</a>
+                        </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <!-- 数学公式识别 -->
+              <li class="nav-item">
+                <span class="nav-link chapter">
+                  数学公式识别
+                </span>
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="setActive(this); loadContent('授予屏幕录制权限.html')">授予屏幕录制权限
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="setActive(this); loadContent('识别数学公式.html')">识别数学公式</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="setActive(this); loadContent('公式识别记录.html')">公式识别记录</a>
+                  </li>
+                </ul>
+              </li>
+              <!-- 数学符号识别 -->
+              <li class="nav-item">
+                <a class="nav-link chapter" href="#" onclick="setActive(this); loadContent('数学符号识别.html')">
+                  数学符号识别
+                </a>
+              </li>
+              <!-- 文字识别 -->
+              <li class="nav-item">
+                <a class="nav-link chapter" href="#" onclick="setActive(this); loadContent('文字识别.html')">
+                  文字识别
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+          <iframe id="content-frame" src="常规体_斜体_粗体_粗斜体.html" style="width: 100%; height: 100vh; border: none;"></iframe>
+        </main>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDzwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+      function loadContent(url) {
+        var iframe = document.getElementById('content-frame');
+        iframe.src = url;
+      }
+
+      function setActive(element) {
+        // Remove active class from all nav links
+        var navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(function(navLink) {
+          navLink.classList.remove('active');
+        });
+
+        // Add active class to the clicked nav link
+        element.classList.add('active');
+      }
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(function(navLink) {
+          navLink.addEventListener('click', function(event) {
+            event.preventDefault();
+            var url = this.getAttribute('href');
+            if (url !== '#') {
+              loadContent(url);
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

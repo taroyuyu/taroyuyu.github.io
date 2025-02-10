@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MathCapture教程 - 现代化、美观的HTML页面，包含导航栏和内容展示">
+    <title>MathCapture教程</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #f4f4f4;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        }
+        .sidebar h2 {
+            font-size: 1.5em;
+            margin-bottom: 1em;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin: 10px 0;
+            position: relative;
+        }
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1.1em;
+        }
+        .sidebar ul li a:hover {
+            color: #007BFF;
+        }
+        .sidebar ul li ul {
+            display: none;
+            list-style: none;
+            padding-left: 20px;
+            margin-top: 5px;
+        }
+        .sidebar ul li:hover ul {
+            display: block;
+        }
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        .content iframe {
+            width: 100%;
+            height: 80vh;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>MathCapture教程</h2>
+        <ul>
+            <li>
+                <a href="#" onclick="loadContent('MathCaptureTutorialIndex.html')">文档1</a>
+                <ul>
+                    <li><a href="#" onclick="loadContent('subdocument1.html')">子文档1</a></li>
+                    <li><a href="#" onclick="loadContent('subdocument2.html')">子文档2</a></li>
+                </ul>
+            </li>
+            <li><a href="#" onclick="loadContent('document2.html')">文档2</a></li>
+            <li><a href="#" onclick="loadContent('document3.html')">文档3</a></li>
+            <li><a href="#" onclick="loadContent('document4.html')">文档4</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <iframe id="contentFrame" src="MathCaptureTutorialIndex.html"></iframe>
+    </div>
+
+    <script>
+        function loadContent(url) {
+            document.getElementById('contentFrame').src = url;
+        }
+    </script>
+</body>
+</html>

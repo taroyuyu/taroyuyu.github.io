@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<meta name="referrer" content="origin">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>适用于 Microsoft Office 的 MathCapture 插件</title>
+	<meta name="title" content="Privacy Policy">
+	<style>
+	body, div, li, h1, h2, p
+	{
+		margin:0;
+		padding:0;
+	}
+	li {
+		margin-bottom:6px;
+	}
+	body {
+		font-family:Arial,"Lucida Grande",sans-serif;
+		color:#333;
+		font-size:15px;
+		line-height:1.8em;
+		-webkit-font-smoothing:antialiased;
+	}
+	img {
+		display:block;
+		width:100%;
+	}
+	a {
+		color:#4285f4;
+		text-decoration:none;
+	}
+	a:hover {
+		text-decoration:underline;
+	}
+	h1 {
+		font-size:28px;
+	}
+	h1, h2 {
+		font-weight:normal;
+		margin-bottom:16px;
+	}
+	h2 {
+		margin-top:25px;
+		margin-bottom:10px;
+	}
+	p {
+		margin-bottom:14px;
+	}
+	p a:hover {
+		text-decoration:underline;
+	}
+	span {
+		background:#eee;
+		border:1px solid #ccc;
+		border-radius:2px;
+		padding:0 3px;
+		padding-bottom:1px;
+		margin:0 4px;
+		font-size:14px;
+		font-family:monospace;
+	}
+	.header {
+		padding:26px 0;
+		border-bottom:1px solid #eaeaea;
+	}
+	.main {
+		margin-top:35px;
+		margin-bottom:70px;
+		min-height:180px;
+	}
+	.footer {
+		border-top:1px solid #eaeaea;
+		text-align:center;
+		padding-top:15px;
+		padding-bottom:35px;
+		font-size:13px;
+	}
+	.flex {
+		display:flex;
+	}
+	.flex-box {
+		flex:1;
+	}
+	.flex-center {
+		align-items:center;
+	}
+	.content-box {
+		max-width:1200px;
+		margin:0 auto;
+		padding:0 20px;
+	}
+	.icon {
+		display:block;
+		width:32px;
+		height:32px;
+		background-image:url(assets/icon64.png);
+		background-size:100%;
+	}
+	.nav-links {
+		margin:0;
+		padding:0;
+	}
+	.nav-links li {
+		display:inline-block;
+		margin:0;
+	}
+	.nav-links a {
+		color:inherit;
+	}
+	.header-links {
+		font-size:17px;
+	}
+	.header-links li:after {
+		content:"/";
+		padding-left:15px;
+		padding-right:10px;
+		color:#000;
+	}
+	.header-links li a:hover {
+		text-decoration:underline;
+	}
+	.header-links li:last-child:after {
+		content:"";
+		padding:0;
+	}
+	.footer-links li {
+		color:#777;
+		margin:0 6px;
+	}
+	.button-wrap {
+		text-align:center;
+		margin-top:50px;
+		margin-bottom:40px;
+	}
+	.button {
+	    display: inline-block;
+	    color: #fff;
+	    background-color: #4285f4;
+	    border-radius: 4px;
+	    text-transform: uppercase;
+	    min-width: 152px;
+	    line-height: 24px;
+	    padding: 12px 24px;
+		padding-bottom:10px;
+	    user-select:none;
+		font-size:14px;
+		font-weight:bold;
+	}
+	.img-wrap {
+		margin:25px 0;
+	}
+	
+	@media (max-width:480px) {
+		h1 {
+			font-size:24px;
+		}
+		h2 {
+			font-size:20px;
+		}
+		.main {
+			padding-top:5px;
+		}
+		.img-wrap {
+			margin:20px -20px;
+		}
+	}
+	/* Floating outline styles */
+	.floating-outline {
+		position: fixed;
+		top: 10px;
+		right: 10px;
+		background-color: #fff;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+		padding: 10px;
+		z-index: 1000;
+	}
+	.floating-outline h3 {
+		font-size: 16px;
+		margin-bottom: 10px;
+	}
+	.floating-outline ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+	.floating-outline ul li {
+		margin-bottom: 6px;
+	}
+	.floating-outline ul li a {
+		color: #4285f4;
+		text-decoration: none;
+	}
+	.floating-outline ul li a:hover {
+		text-decoration: underline;
+	}
+	</style>
+</head>
+<body>
+	<div class="floating-outline">
+		<ul>
+			<li><a href="#install-word-plugin">为Microsoft Word安装插件</a></li>
+			<li><a href="#install-powerpoint-plugin">为Microsoft PowerPoint安装插件</a></li>
+			<li><a href="#faq">常见问题</a></li>
+			<li><a href="#future">Word功能区开发进展</a></li>
+		</ul>
+	</div>
+	<div class="content-box">
+		<div class="main">
+			<h2 id="what-personal-information-we-collect" style="text-align:center;">适用于 Microsoft Office 的 MathCapture 插件</h2>
+
+			<p style="background-color: antiquewhite;">
+				网页中提供了视频教程，如果您的浏览器无法播放视频，请使用Chrome或Firefox浏览器打开本网页。后续我们会修复视频播放的问题。<br>
+				目前，在Microsoft Word和PowerPoint中插入公式时，会自动打开一个MathCapture公式编辑器窗口，您需要在编辑好公式之后关闭该窗口，才会在Microsoft Word和PowerPoint中显示您编辑好的公式。如果不关闭窗口，不会在Word和PowerPoint中显示。<br>
+				如果插件安装失败或者插件安装之后，无法在Microsoft Word和PowerPoint中调用MathCapture插入公式，请与我们联系。我们将通过腾讯会议远程协助您安装好插件。联系方式：
+				<ul style="background-color: antiquewhite;">
+					<li>电子邮件:taroyuyu@icloud.com</li>
+					<li>微信:MathCaptureTech</li>
+				</ul>
+			</p>
+
+			<p style="background-color: antiquewhite;">
+				我们近期正在积极开发Word插件，请给我们一些时间。我们争取在十二月底之前放出第二版的Word和PowerPoint插件。
+			</p>
+			<p id="install-word-plugin">
+				<h3>为Microsoft Word安装插件</h3>
+				<ol>
+					<li>下载<a href="/MathCapturePluginForWord.pkg">MathCapturePluginForWord.pkg</a></li>
+					<li>双击运行MathCapturePluginForWord.pkg</li>
+					<img src="/office_plugin/resource/zh/MathCapturePluginForWord01.png" alt="MathCapturePluginForWord01">
+					<img src="/office_plugin/resource/zh/MathCapturePluginForWord02.png" alt="MathCapturePluginForWord02">
+					<img src="/office_plugin/resource/zh/MathCapturePluginForWord03.png" alt="MathCapturePluginForWord03">
+					<li>如果您已经启动了Microsoft Word，安装程序会提醒您关闭Microsoft Word，点击“关闭应用程序并安装”即可</li>
+					<img src="/office_plugin/resource/zh/MathCapturePluginForWord04.png" alt="MathCapturePluginForWord04">
+					<li>安装过程中会提示您输入密码，您只需要输入密码即可。密码是您的开机密码。请放心，我们不会获取到您的开机密码，也不存在泄漏您的开机密码的可能性。输入的密码并不会在界面中显示出来（此举是防止泄漏您的密码），您只需要输入密码并按回车键即可。如果密码输入错误，系统会提示您再次输入密码。</li>
+					<img src="/office_plugin/resource/zh/MathCapturePluginForWord05.png" alt="MathCapturePluginForWord05">
+					<div style="display: flex; justify-content: center;">
+						<video playsinline autoplay muted controls loop src="/office_plugin/resource/zh/WordPluginAutoInstall.mov" style="width: 46.67vw;"></video>
+					</div>
+					<li>重新启动 Microsoft Word，从菜单中选择“插入 -> 对象”，然后找到 MathCapture Equation 即可 Microsoft Word 中插入方程式。</li>
+					<img src="/MathCaptureBuddy/MicrosoftWord08.png" alt="MicrosoftWord08">
+					<img src="/MathCaptureBuddy/MicrosoftWord09.png" alt="MicrosoftWord09">
+					<div style="display: flex; justify-content: center;">
+						<video playsinline autoplay muted controls loop src="/MathCaptureBuddy/MicrosoftWord10.mov" style="width: 46.67vw;"></video>
+					</div>
+				</ol>
+			</p>
+
+			<p id="install-powerpoint-plugin">
+				<h3>为Microsoft PowerPoint安装插件</h3>
+				<ol>
+					<li>下载<a href="/MathCapturePluginForPowerPoint.pkg">MathCapturePluginForPowerPoint.pkg</a></li>
+					<li>双击MathCapturePluginForPowerPoint.pkg</li>
+					<img src="/office_plugin/resource/zh/MathCapturePluginForPowerPoint01.png" alt="MathCapturePluginForPowerPoint01">
+					<img src="/office_plugin/resource/zh/MathCapturePluginForPowerPoint02.png" alt="MathCapturePluginForPowerPoint02">
+					<img src="/office_plugin/resource/zh/MathCapturePluginForPowerPoint03.png" alt="MathCapturePluginForPowerPoint03">
+					<li>如果您已经启动了Microsoft PowerPoint，安装程序会提醒您关闭Microsoft PowerPoint，点击“关闭应用程序并安装”即可</li>
+					<img src="/office_plugin/resource/zh/MathCapturePluginForPowerPoint04.png" alt="MathCapturePluginForPowerPoint04">
+					<li>安装过程中会提示您输入密码，您只需要输入密码即可。密码是您的开机密码。请放心，我们不会获取到您的开机密码，也不存在泄漏您的开机密码的可能性。输入的密码并不会在界面中显示出来（此举是防止泄漏您的密码），您只需要输入密码并按回车键即可。如果密码输入错误，系统会提示您再次输入密码。</li>
+					<img src="/office_plugin/resource/zh/MathCapturePluginForPowerPoint05.png" alt="MathCapturePluginForPowerPoint05">
+					<div style="display: flex; justify-content: center;">
+						<video playsinline autoplay muted controls loop src="/office_plugin/resource/zh/PowerPointPluginAutoInstall.mov" style="width: 66.67vw;"></video>
+					</div>
+					<li>重新启动 Microsoft PowerPoint，从菜单中选择“插入 -> 对象”，然后找到 MathCapture Equation 即可 Microsoft Word 中插入方程式。</li>
+					<img src="/MathCaptureBuddy/PowerPoint08.png" alt="PowerPoint08">
+					<img src="/MathCaptureBuddy/PowerPoint09.png" alt="PowerPoint09">
+					<div style="display: flex; justify-content: center;">
+						<video playsinline autoplay muted controls loop src="/MathCaptureBuddy/PowerPoint10.mov" style="width: 46.67vw;"></video>
+					</div>
+				</ol>
+			</p>
+
+			<p id="faq">
+				<h3>常见问题</h3>
+				<img src="/PluginError01.png" alt="PluginError01"><br/>
+				或者<br>
+				<img src="/MathCaptureBuddy/Warnning.jpg" alt="Warnning">
+				<ol>
+					<li>点击“好” 或者 “完成”，关闭Word或PowerPoint</li>
+					<li>打开系统偏好设置设置</a></li>
+					<li>选择安全与隐私</li>
+					<img src="/PluginError02.png" alt="PluginError02">
+					<li>根据下图所示，点击“仍然允许”</li>
+					<img src="/PluginError03.png" alt="PluginError03">
+					<li>退出Word/PowerPoint，重新启动Word/PowerPoint</li>
+					<li>根据下图所示，点击“打开”</li>
+					<img src="/PluginError04.png" alt="PluginError04">
+				</ol>
+			</p>
+
+			<p id="future">
+				<h3>Word功能区开发进展</h3>
+				目前，我们正在积极开发Wrod功能区，进展一切顺利。我们争取在12月15号左右放出第一版的带有Word功能区的插件。
+				<div style="display: flex; justify-content: center;">
+					<video playsinline autoplay muted controls loop src="/office_plugin/resource/zh/future.mov" style="width: 46.67vw;"></video>
+				</div>
+			</p>
+		</div>
+	</div>
+</body>

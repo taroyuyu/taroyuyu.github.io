@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='UTF-8'>
+    <title>Purchase Software</title>
+    <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+    <script type="text/javascript">
+      Paddle.Initialize({ 
+        token: 'live_12a1def75b73dfd924e81e63b2b' // replace with a client-side token
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Purchase Software</h1>
+    <button id='checkout-button'>
+      Subscribe to Pro
+    </button>
+    <script type='text/javascript'>
+      const button = document.getElementById('checkout-button')
+      button.addEventListener('click', event => {
+        var itemsList = [{
+          priceId: 'pri_01j5r0n6ebqerqm1yj2dbthk18',
+          quantity: 1
+        }];
+        
+        Paddle.Checkout.open({
+          settings: {
+            displayMode: "overlay",
+            theme: "light",
+            locale: "en"
+          },
+          items: itemsList,
+        });
+      })
+    </script>
+  </body>
+</html>

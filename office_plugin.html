@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<meta name="referrer" content="origin">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MathCapture Plugin for Microsoft Office</title>
+	<meta name="title" content="Privacy Policy">
+	<script>
+		// 获取浏览器语言
+		var userLang = navigator.language || navigator.userLanguage;
+		// Check the user's language
+		if (userLang.startsWith('zh')) {
+			// Redirect to the Chinese version of the plugin page
+			window.location.href = 'office_plugin_zh_cn.html';
+		}
+	</script>
+	<style>
+		body, div, li, h1, h2, p
+		{
+			margin:0;
+			padding:0;
+		}
+		li {
+			margin-bottom:6px;
+		}
+		body {
+			font-family:Arial,"Lucida Grande",sans-serif;
+			color:#333;
+			font-size:15px;
+			line-height:1.8em;
+			-webkit-font-smoothing:antialiased;
+		}
+		img {
+			display:block;
+			width:100%;
+		}
+		a {
+			color:#4285f4;
+			text-decoration:none;
+		}
+		a:hover {
+			text-decoration:underline;
+		}
+		h1 {
+			font-size:28px;
+		}
+		h1, h2 {
+			font-weight:normal;
+			margin-bottom:16px;
+		}
+		h2 {
+			margin-top:25px;
+			margin-bottom:10px;
+		}
+		p {
+			margin-bottom:14px;
+		}
+		p a:hover {
+			text-decoration:underline;
+		}
+		span {
+			background:#eee;
+			border:1px solid #ccc;
+			border-radius:2px;
+			padding:0 3px;
+			padding-bottom:1px;
+			margin:0 4px;
+			font-size:14px;
+			font-family:monospace;
+		}
+		.header {
+			padding:26px 0;
+			border-bottom:1px solid #eaeaea;
+		}
+		.main {
+			margin-top:35px;
+			margin-bottom:70px;
+			min-height:180px;
+		}
+		.footer {
+			border-top:1px solid #eaeaea;
+			text-align:center;
+			padding-top:15px;
+			padding-bottom:35px;
+			font-size:13px;
+		}
+		.flex {
+			display:flex;
+		}
+		.flex-box {
+			flex:1;
+		}
+		.flex-center {
+			align-items:center;
+		}
+		.content-box {
+			max-width:1200px;
+			margin:0 auto;
+			padding:0 20px;
+		}
+		.icon {
+			display:block;
+			width:32px;
+			height:32px;
+			background-image:url(assets/icon64.png);
+			background-size:100%;
+		}
+		.nav-links {
+			margin:0;
+			padding:0;
+		}
+		.nav-links li {
+			display:inline-block;
+			margin:0;
+		}
+		.nav-links a {
+			color:inherit;
+		}
+		.header-links {
+			font-size:17px;
+		}
+		.header-links li:after {
+			content:"/";
+			padding-left:15px;
+			padding-right:10px;
+			color:#000;
+		}
+		.header-links li a:hover {
+			text-decoration:underline;
+		}
+		.header-links li:last-child:after {
+			content:"";
+			padding:0;
+		}
+		.footer-links li {
+			color:#777;
+			margin:0 6px;
+		}
+		.button-wrap {
+			text-align:center;
+			margin-top:50px;
+			margin-bottom:40px;
+		}
+		.button {
+			display: inline-block;
+			color: #fff;
+			background-color: #4285f4;
+			border-radius: 4px;
+			text-transform: uppercase;
+			min-width: 152px;
+			line-height: 24px;
+			padding: 12px 24px;
+			padding-bottom:10px;
+			user-select:none;
+			font-size:14px;
+			font-weight:bold;
+		}
+		.img-wrap {
+			margin:25px 0;
+		}
+		
+		@media (max-width:480px) {
+			h1 {
+				font-size:24px;
+			}
+			h2 {
+				font-size:20px;
+			}
+			.main {
+				padding-top:5px;
+			}
+			.img-wrap {
+				margin:20px -20px;
+			}
+		}
+		/* Floating outline styles */
+		.floating-outline {
+			position: fixed;
+			top: 10px;
+			right: 10px;
+			width: 300px;
+			background-color: #fff;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+			padding: 10px;
+			z-index: 1000;
+		}
+		.floating-outline h3 {
+			font-size: 16px;
+			margin-bottom: 10px;
+		}
+		.floating-outline ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+		.floating-outline ul li {
+			margin-bottom: 6px;
+		}
+		.floating-outline ul li a {
+			color: #4285f4;
+			text-decoration: none;
+		}
+		.floating-outline ul li a:hover {
+			text-decoration: underline;
+		}
+		</style>
+</head>
+<body>
+	<div class="floating-outline">
+		<h3>Outline</h3>
+		<ul>
+			<li><a href="#install-word-plugin">Install the MathCapture plug-in for Microsoft Word</a></li>
+			<li><a href="#install-powerpoint-plugin">Install the MathCapture plug-in for Microsoft PowerPoint</a></li>
+			<li><a href="#faq">Frequently asked questions</a></li>
+		</ul>
+	</div>
+	<div class="content-box">
+		<div class="main">
+			<h2 id="what-personal-information-we-collect" style="text-align:center;">MathCapture Plugin for Microsoft Office</h2>
+
+			<p style="background-color: antiquewhite;">
+				Video tutorials are available on this page. If your browser cannot play the video, please use Chrome or Firefox to open this page. We will fix the video playback issue in the future.<br>
+				Currently, when you insert a formula in Microsoft Word and PowerPoint, a MathCapture Formula editor window automatically opens, and you need to close the window after you have edited the formula to display your edited formula in Microsoft Word and PowerPoint. If you do not close the window, it will not be displayed in Word or PowerPoint.<br>
+				If the plugin installation fails or you are unable to use MathCapture to insert equations in Microsoft Word or PowerPoint after installation, please contact us. We will do our best to assist you in getting the plugin installed properly. We are also working on improving the installation guide. email:taroyuyu@icloud.com
+			</p>
+
+			<p>
+				<h3 id="install-word-plugin">Install the MathCapture plug-in for Microsoft Word</h3>
+				<ol>
+					<li>Download <a href="/MathCapturePluginForWord.pkg">MathCapturePluginForWord.pkg</a></li>
+					<li>double-click MathCapturePluginForWord.pkg</li>
+					<img src="/office_plugin/resource/en/MathCapturePluginForWord01.png" alt="MathCapturePluginForWord01">
+					<img src="/office_plugin/resource/en/MathCapturePluginForWord02.png" alt="MathCapturePluginForWord02">
+					<img src="/office_plugin/resource/en/MathCapturePluginForWord03.png" alt="MathCapturePluginForWord03">
+					<li>If you have Microsoft Word already started, the installer will remind you to close Microsoft PowerPoint by clicking "Close Application and Install"</li>
+					<img src="/office_plugin/resource/en/MathCapturePluginForWord04.png" alt="MathCapturePluginForWord04">
+					<li>During the install process, you will be prompted to enter your password. Simply enter your login password when prompted. Rest assured, we do not have access to your login password, and there is no risk of it being leaked.If you enter the password incorrectly, you will be prompted to enter the password again.</li>
+					<img src="/office_plugin/resource/en/MathCapturePluginForWord05.png" alt="MathCapturePluginForWord05">
+					<div style="display: flex; justify-content: center;">
+						<video playsinline autoplay muted controls loop src="/office_plugin/resource/en/WordPluginAutoInstall.mov" style="width: 46.67vw;"></video>
+					</div>
+					<li>Restart Microsoft Word, select "Insert -> Object" from the menu, and find MathCapture Equation to insert equations in Microsoft Word.</li>
+					<img src="/MathCaptureBuddy/MicrosoftWord_7.png" alt="MicrosoftWord_7">
+					<img src="/MathCaptureBuddy/MicrosoftWord_8.png" alt="MicrosoftWord_8">
+					<div style="display: flex; justify-content: center;">
+						<video playsinline autoplay muted controls loop src="/office_plugin/resource/en/MicrosoftWord10.mov" style="width: 46.67vw;"></video>
+					</div>
+				</ol>
+			</p>
+
+			<p>
+				<h3 id="install-powerpoint-plugin">Install the MathCapture plug-in for Microsoft PowerPoint</h3>
+				<ol>
+					<li>Download <a href="/MathCapturePluginForPowerPoint.pkg">MathCapturePluginForPowerPoint.pkg</a></li>
+					<li>double-click MathCapturePluginForPowerPoint.pkg</li>
+					<img src="/office_plugin/resource/en/MathCapturePluginForPowerPoint01.png" alt="MathCapturePluginForPowerPoint01">
+					<img src="/office_plugin/resource/en/MathCapturePluginForPowerPoint02.png" alt="MathCapturePluginForPowerPoint02">
+					<img src="/office_plugin/resource/en/MathCapturePluginForPowerPoint03.png" alt="MathCapturePluginForPowerPoint03">
+					<li>If you have Microsoft PowerPoint already started, the installer will remind you to close Microsoft Word by clicking "Close Application and Install"</li>
+					<img src="/office_plugin/resource/en/MathCapturePluginForPowerPoint04.png" alt="MathCapturePluginForPowerPoint04">
+					<li>During the install process, you will be prompted to enter your password. Simply enter your login password when prompted. Rest assured, we do not have access to your login password, and there is no risk of it being leaked.If you enter the password incorrectly, you will be prompted to enter the password again.</li>
+					<img src="/office_plugin/resource/en/MathCapturePluginForPowerPoint05.png" alt="MathCapturePluginForPowerPoint05">
+					<div style="display: flex; justify-content: center;">
+						<video playsinline autoplay muted controls loop src="/office_plugin/resource/en/PowerPointPluginAutoInstall.mov" style="width: 46.67vw;"></video>
+					</div>
+					<li>Restart Microsoft PowerPoint, select "Insert -> Object" from the menu, and find MathCapture Equation to insert equations in Microsoft PowerPoint.</li>
+					<img src="/office_plugin/resource/en/PowerPoint08.png" alt="PowerPoint08">
+					<img src="/office_plugin/resource/en/PowerPoint09.png" alt="PowerPoint09">
+					<div style="display: flex; justify-content: center;">
+						<video playsinline autoplay muted controls loop src="/office_plugin/resource/en/PowerPoint10.mov" style="width: 46.67vw;"></video>
+					</div>
+				</ol>
+			</p>
+
+			<p>
+				<h3 id="faq">Frequently asked questions</h3>
+				<img src="/office_plugin/resource/en/PluginError01.png" alt="PluginError01">
+				<ol>
+					<li>Open System Preferences Settings</a></li>
+					<li>Click Security & Privacy</li>
+					<img src="/office_plugin/resource/en/PluginError02.png" alt="PluginError02">
+					<li>As shown in the figure below, click "Allow Anyway"</li>
+					<img src="/office_plugin/resource/en/PluginError03.png" alt="PluginError03">
+					<li>Exit Word/PowerPoint and restart Word/PowerPoint</li>
+					<li>Click "Open" as shown below.</li>
+					<img src="/office_plugin/resource/en/PluginError04.png" alt="PluginError04">
+				</ol>
+			</p>
+		</div>
+	</div>
+</body>
