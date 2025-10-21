@@ -18,6 +18,82 @@
       .gradient {
         background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
       }
+      
+      /* Image Zoom Modal Styles */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.9);
+        animation: fadeIn 0.2s ease-out;
+        overflow: hidden;
+      }
+      
+      .modal.show {
+        display: block;
+      }
+      
+      .modal-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 90vw;
+        max-height: 90vh;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        animation: zoomIn 0.2s ease-out;
+      }
+      
+      .close {
+        position: absolute;
+        top: 20px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 1001;
+      }
+      
+      .close:hover,
+      .close:focus {
+        color: #bbb;
+        text-decoration: none;
+      }
+      
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      
+      @keyframes zoomIn {
+        0% { 
+          transform: translate(-50%, -50%) scale(0.9); 
+          opacity: 0; 
+        }
+        100% { 
+          transform: translate(-50%, -50%) scale(1); 
+          opacity: 1; 
+        }
+      }
+      
+      /* Make images clickable */
+      .zoomable-image {
+        cursor: pointer;
+        transition: transform 0.2s ease-in-out;
+      }
+      
+      .zoomable-image:hover {
+        transform: scale(1.02);
+      }
     </style>
   </head>
   <!-- Google tag (gtag.js) -->
@@ -142,11 +218,11 @@
           </div>
           <div class="flex flex-col md:flex-row justify-center items-center gap-8">
             <div class="flex flex-col items-center max-w-sm">
-              <img class="w-full rounded-lg shadow-xl ring-1 ring-black ring-opacity-5 mb-3" src="MathCapture/assets/images/en/word_plugin.png" alt="Word Plugin">
+              <img class="w-full rounded-lg shadow-xl ring-1 ring-black ring-opacity-5 mb-3 zoomable-image" src="MathCapture/assets/images/en/word_plugin.png" alt="Word Plugin" onclick="openImageModal(this)">
               <p class="text-center text-sm text-gray-600 font-medium">Word Plugin</p>
             </div>
             <div class="flex flex-col items-center max-w-sm">
-              <img class="w-full rounded-lg shadow-xl ring-1 ring-black ring-opacity-5 mb-3" src="MathCapture/assets/images/en/powerpoint_plugin.png" alt="PowerPoint Plugin">
+              <img class="w-full rounded-lg shadow-xl ring-1 ring-black ring-opacity-5 mb-3 zoomable-image" src="MathCapture/assets/images/en/powerpoint_plugin.png" alt="PowerPoint Plugin" onclick="openImageModal(this)">
               <p class="text-center text-sm text-gray-600 font-medium">PowerPoint Plugin</p>
             </div>
           </div>
@@ -164,7 +240,7 @@
             <!-- Instant LaTeX Mode -->
             <div class="text-center">
               <div class="bg-gray-50 rounded-lg p-6 mb-4 h-full flex flex-col">
-                <img class="w-full rounded-lg shadow-lg mb-4" src="MathCapture/assets/images/en/latex_express_render.png" alt="Instant LaTeX Mode">
+                <img class="w-full rounded-lg shadow-lg mb-4 zoomable-image" src="MathCapture/assets/images/en/latex_express_render.png" alt="Instant LaTeX Mode" onclick="openImageModal(this)">
                 <h4 class="text-xl font-bold text-gray-800 mb-3">Instant LaTeX Mode</h4>
                 <p id="id_feature_list_InstantLatexMode_feature_value" class="text-gray-600 text-sm flex-grow">
                   Write LaTeX formulas with real-time rendering — no compilation delay.
@@ -175,7 +251,7 @@
             <!-- Standard LaTeX Mode -->
             <div class="text-center">
               <div class="bg-gray-50 rounded-lg p-6 mb-4 h-full flex flex-col">
-                <img class="w-full rounded-lg shadow-lg mb-4" src="MathCapture/assets/images/en/latex_standard_render.png" alt="Standard LaTeX Mode">
+                <img class="w-full rounded-lg shadow-lg mb-4 zoomable-image" src="MathCapture/assets/images/en/latex_standard_render.png" alt="Standard LaTeX Mode" onclick="openImageModal(this)">
                 <h4 class="text-xl font-bold text-gray-800 mb-3">Standard LaTeX Mode</h4>
                 <p id="id_feature_list_StandardLatexMode_feature_value" class="text-gray-600 text-sm flex-grow">
                   Use professional LaTeX engines (XeLaTeX, PdfLaTeX, LuaLaTeX) with full package support, including tikz (graphics), mhchem (chemistry), and algorithm (pseudocode).
@@ -186,7 +262,7 @@
             <!-- Visual Editing Mode -->
             <div class="text-center">
               <div class="bg-gray-50 rounded-lg p-6 mb-4 h-full flex flex-col">
-                <img class="w-full rounded-lg shadow-lg mb-4" src="MathCapture/assets/images/en/visual_mode.png" alt="Visual Editing Mode">
+                <img class="w-full rounded-lg shadow-lg mb-4 zoomable-image" src="MathCapture/assets/images/en/visual_mode.png" alt="Visual Editing Mode" onclick="openImageModal(this)">
                 <h4 class="text-xl font-bold text-gray-800 mb-3">Visual Editing Mode</h4>
                 <p id="id_feature_list_VisualEditingMode_feature_value" class="text-gray-600 text-sm flex-grow">
                   Edit formulas visually without LaTeX code. Supports exporting to LaTeX and MathML formats.
@@ -210,14 +286,14 @@
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div class="text-center">
               <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-8 h-full flex flex-col">
-                <img class="w-full rounded-lg shadow-lg mb-6" src="MathCapture/assets/images/en/equation_recognition.png" alt="Formula Recognition">
+                <img class="w-full rounded-lg shadow-lg mb-6 zoomable-image" src="MathCapture/assets/images/en/equation_recognition.png" alt="Formula Recognition" onclick="openImageModal(this)">
                 <h4 id="id_feature_list_FormulaRecognition_feature_name" class="text-2xl font-bold text-gray-800 mb-4">Formula Recognition</h4>
                 <p id="id_feature_list_FormulaRecognition_feature_value" class="text-gray-600 flex-grow">Convert math equation images into LaTeX code instantly. Works fully offline.</p>
               </div>
             </div>
             <div class="text-center">
               <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg p-8 h-full flex flex-col">
-                <img class="w-full rounded-lg shadow-lg mb-6" src="MathCapture/assets/images/en/symbol_recognition.png" alt="Symbol Recognition">
+                <img class="w-full rounded-lg shadow-lg mb-6 zoomable-image" src="MathCapture/assets/images/en/symbol_recognition.png" alt="Symbol Recognition" onclick="openImageModal(this)">
                 <h4 id="id_feature_list_SymbolRecognition_feature_name" class="text-2xl font-bold text-gray-800 mb-4">Symbol Recognition</h4>
                 <p id="id_feature_list_SymbolRecognition_feature_value" class="text-gray-600 flex-grow">Identify mathematical symbols quickly and accurately.</p>
               </div>
@@ -334,6 +410,12 @@
         Contact us!
       </button>
     </section>
+    <!-- Image Zoom Modal -->
+    <div id="imageModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImage">
+    </div>
+    
     <!--Footer-->
     <footer>
       <p class="copyright" style="text-align: center;">Copyright © 2023-present</p>
@@ -526,6 +608,37 @@
         replaceText('en');
         document.getElementById('id_guide').hidden = true;
       }
+
+      // Image Zoom Modal Functionality
+      function openImageModal(img) {
+        var modal = document.getElementById('imageModal');
+        var modalImg = document.getElementById('modalImage');
+        modal.style.display = 'flex';
+        modalImg.src = img.src;
+        modalImg.alt = img.alt;
+      }
+
+      function closeImageModal() {
+        var modal = document.getElementById('imageModal');
+        modal.style.display = 'none';
+      }
+
+      // Close modal when clicking the X
+      document.querySelector('.close').onclick = closeImageModal;
+
+      // Close modal when clicking outside the image
+      document.getElementById('imageModal').onclick = function(event) {
+        if (event.target === this) {
+          closeImageModal();
+        }
+      };
+
+      // Close modal with Escape key
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+          closeImageModal();
+        }
+      });
 
     </script>
   </body>
