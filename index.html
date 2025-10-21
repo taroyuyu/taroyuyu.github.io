@@ -129,34 +129,6 @@
         <div class="w-full mb-4">
           <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
         </div>
-        <div class="flex flex-wrap">
-          <div class="w-5/6 sm:w-1/2 p-6">
-            <h3 id="id_feature_list_MathFormulaRecognition_feature_name" class="text-3xl text-gray-800 font-bold leading-none mb-3">
-              Math Formula Recognition
-            </h3>
-            <p id="id_feature_list_MathFormulaRecognition_feature_value" class="text-gray-600 mb-8">
-              Harnessing the power of an advanced AI engine, it converts images of mathematical formulae into Latex code, eliminating the hassle of manual typing and saving you valuable time.
-            </p>
-          </div>
-          <div class="w-full sm:w-1/2 p-6">
-            <video playsinline="" autoplay="" muted="" controls="" loop="" class="mx-auto w-full rounded-lg shadow-xl ring-1 ring-black ring-opacity-5" src="MathFormulaRecognition_en.mov"></video>
-          </div>
-        </div>
-        <div class="flex flex-wrap flex-col-reverse sm:flex-row">
-          <div class="w-full sm:w-1/2 p-6 mt-6">
-            <video playsinline="" autoplay="" muted="" controls="" loop="" class="mx-auto w-full rounded-lg shadow-xl ring-1 ring-black ring-opacity-5" src="MathSymbolRecognition_en.mov"></video>
-          </div>
-          <div class="w-full sm:w-1/2 p-6 mt-6">
-            <div class="align-middle">
-              <h3 id="id_feature_list_MathSymbolRecognition_feature_name" class="text-3xl text-gray-800 font-bold leading-none mb-3">
-                Math Symbol Recognition
-              </h3>
-              <p id="id_feature_list_MathSymbolRecognition_feature_value" class="text-gray-600 mb-8">
-                Draw a math symbol on white board, and instantly get its corresponding Latex code, saving you the trouble of searching for it.
-              </p>
-            </div>
-          </div>
-        </div>
         <!-- Seamless Integration with Microsoft Office -->
         <div class="w-full p-6">
           <div class="text-center mb-8">
@@ -214,6 +186,29 @@
           </div>
         </div>
         <!-- End of Multiple Editing Modes for Different Needs -->
+          <!-- Built-in Recognition Engines -->
+         <div class="w-full p-6">
+           <div class="text-center mb-8">
+             <h3 id="id_feature_list_RecognitionEngines_feature_name" class="text-3xl text-gray-800 font-bold leading-none mb-3">
+               Built-in Recognition Engines
+             </h3>
+             <p id="id_feature_list_RecognitionEngines_feature_value" class="text-gray-600 mb-8 max-w-4xl mx-auto">
+               Equation Recognition: Convert math Equation images into LaTeX code instantly. Works fully offline.<br>
+               Symbol Recognition: Identify mathematical symbols quickly and accurately.<br>
+             </p>
+           </div>
+          <div class="flex flex-col md:flex-row justify-center items-center gap-8">
+            <div class="flex flex-col items-center max-w-sm">
+              <img class="w-full rounded-lg shadow-xl ring-1 ring-black ring-opacity-5 mb-3" src="MathCapture/assets/images/en/equation_recognition.png" alt="Word Plugin">
+              <p class="text-center text-sm text-gray-600 font-medium">Formula Recognition</p>
+            </div>
+            <div class="flex flex-col items-center max-w-sm">
+              <img class="w-full rounded-lg shadow-xl ring-1 ring-black ring-opacity-5 mb-3" src="MathCapture/assets/images/en/symbol_recognition.png" alt="PowerPoint Plugin">
+              <p class="text-center text-sm text-gray-600 font-medium">Symbol Recognition</p>
+            </div>
+          </div>
+        </div>
+        <!-- End of Built-in Recognition Engines -->
 
       </div>
     </section>
@@ -443,17 +438,14 @@
               document.getElementById('id_features_1').innerText = data["Features"];
               document.getElementById('id_features_2').innerText = data["Features"];
             }
-            if (data["Math Formula Recognition"]) {
-              document.getElementById('id_feature_list_MathFormulaRecognition_feature_name').innerText = data["Math Formula Recognition"];
-            }
-            if (data["Math Symbol Recognition"]) {
-              document.getElementById('id_feature_list_MathSymbolRecognition_feature_name').innerText = data["Math Symbol Recognition"];
-            }
             if (data["Microsoft Office Integration"]) {
               document.getElementById('id_feature_list_MicrosoftOfficeIntegration_feature_name').innerText = data["Microsoft Office Integration"];
             }
             if (data["Multiple Editing Modes"]) {
               document.getElementById('id_feature_list_EditingModes_feature_name').innerText = data["Multiple Editing Modes"];
+            }
+            if (data["Built-in Recognition Engines"]) {
+              document.getElementById('id_feature_list_RecognitionEngines_feature_name').innerText = data["Built-in Recognition Engines"];
             }
             if (data["Instant LaTeX Mode"]) {
               document.getElementById('id_feature_list_InstantLatexMode_feature_value').innerText = data["Instant LaTeX Mode"];
@@ -464,14 +456,11 @@
             if (data["Visual Editing Mode"]) {
               document.getElementById('id_feature_list_VisualEditingMode_feature_value').innerText = data["Visual Editing Mode"];
             }
-            if (data["feature_list_MathFormulaRecognition_feature_value"]) {
-              document.getElementById('id_feature_list_MathFormulaRecognition_feature_value').innerText = data["feature_list_MathFormulaRecognition_feature_value"];
-            }
-            if (data["feature_list_MathSymbolRecognition_feature_value"]) {
-              document.getElementById('id_feature_list_MathSymbolRecognition_feature_value').innerText = data["feature_list_MathSymbolRecognition_feature_value"];
-            }
             if (data["feature_list_MicrosoftOfficeIntegration_feature_value"]) {
               document.getElementById('id_feature_list_MicrosoftOfficeIntegration_feature_value').innerText = data["feature_list_MicrosoftOfficeIntegration_feature_value"];
+            }
+            if (data["feature_list_RecognitionEngines_feature_value"]) {
+              document.getElementById('id_feature_list_RecognitionEngines_feature_value').innerText = data["feature_list_RecognitionEngines_feature_value"];
             }
             if (data["feature_list_InstantLatexMode_feature_value"]) {
               document.getElementById('id_feature_list_InstantLatexMode_feature_value').innerText = data["feature_list_InstantLatexMode_feature_value"];
