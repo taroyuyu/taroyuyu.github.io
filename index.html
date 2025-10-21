@@ -130,7 +130,7 @@
           <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
         </div>
         <!-- Seamless Integration with Microsoft Office -->
-        <div class="w-full p-6">
+        <div class="w-full p-6 mb-12">
           <div class="text-center mb-8">
             <h3 id="id_feature_list_MicrosoftOfficeIntegration_feature_name" class="text-3xl text-gray-800 font-bold leading-none mb-3">
               Seamless Integration with Microsoft Office
@@ -153,58 +153,74 @@
         </div>
         <!-- End of Seamless Integration with Microsoft Office -->
         <!-- Multiple Editing Modes for Different Needs -->
-        <div class="w-full p-6">
-          <div class="text-center mb-8">
+        <div class="w-full p-6 mb-12">
+          <div class="text-center mb-12">
             <h3 id="id_feature_list_EditingModes_feature_name" class="text-3xl text-gray-800 font-bold leading-none mb-3">
               Multiple Editing Modes for Different Needs
             </h3>
           </div>
 
-           <div class="text-center mb-8">
-             <h4 id="id_feature_list_InstantLatexMode_feature_value" class="text-gray-600 mb-8 max-w-4xl mx-auto">
-               Instant LaTeX Mode: Write LaTeX formulas with real-time rendering — no compilation delay.
-             </h4>
-            <img class="w-full rounded-lg shadow-xl ring-1 ring-black ring-opacity-5 mb-3" src="MathCapture/assets/images/en/latex_express_render.png" alt="Word Plugin">
-            <p class="text-center text-sm text-gray-600 font-medium">Instant LaTeX Mode</p>
-          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Instant LaTeX Mode -->
+            <div class="text-center">
+              <div class="bg-gray-50 rounded-lg p-6 mb-4 h-full flex flex-col">
+                <img class="w-full rounded-lg shadow-lg mb-4" src="MathCapture/assets/images/en/latex_express_render.png" alt="Instant LaTeX Mode">
+                <h4 class="text-xl font-bold text-gray-800 mb-3">Instant LaTeX Mode</h4>
+                <p id="id_feature_list_InstantLatexMode_feature_value" class="text-gray-600 text-sm flex-grow">
+                  Write LaTeX formulas with real-time rendering — no compilation delay.
+                </p>
+              </div>
+            </div>
 
-           <div class="text-center mb-8">
-             <p id="id_feature_list_StandardLatexMode_feature_value" class="text-gray-600 mb-8 max-w-4xl mx-auto">
-               Standard LaTeX Mode: Use professional LaTeX engines (XeLaTeX, PdfLaTeX, LuaLaTeX) with full package support, including tikz (graphics), mhchem (chemistry), and algorithm (pseudocode).
-             </p>
-            <img class="w-full rounded-lg shadow-xl ring-1 ring-black ring-opacity-5 mb-3" src="MathCapture/assets/images/en/latex_standard_render.png" alt="Word Plugin">
-            <p class="text-center text-sm text-gray-600 font-medium">Standard LaTeX Mode</p>
-          </div>
+            <!-- Standard LaTeX Mode -->
+            <div class="text-center">
+              <div class="bg-gray-50 rounded-lg p-6 mb-4 h-full flex flex-col">
+                <img class="w-full rounded-lg shadow-lg mb-4" src="MathCapture/assets/images/en/latex_standard_render.png" alt="Standard LaTeX Mode">
+                <h4 class="text-xl font-bold text-gray-800 mb-3">Standard LaTeX Mode</h4>
+                <p id="id_feature_list_StandardLatexMode_feature_value" class="text-gray-600 text-sm flex-grow">
+                  Use professional LaTeX engines (XeLaTeX, PdfLaTeX, LuaLaTeX) with full package support, including tikz (graphics), mhchem (chemistry), and algorithm (pseudocode).
+                </p>
+              </div>
+            </div>
 
-
-           <div class="text-center mb-8">
-             <p id="id_feature_list_VisualEditingMode_feature_value" class="text-gray-600 mb-8 max-w-4xl mx-auto">
-               Visual Editing Mode: Edit formulas visually without LaTeX code. Supports exporting to LaTeX and MathML formats.
-             </p>
-            <img class="w-full rounded-lg shadow-xl ring-1 ring-black ring-opacity-5 mb-3" src="MathCapture/assets/images/en/visual_mode.png" alt="Word Plugin">
-            <p class="text-center text-sm text-gray-600 font-medium">Visual Editing Mode</p>
+            <!-- Visual Editing Mode -->
+            <div class="text-center">
+              <div class="bg-gray-50 rounded-lg p-6 mb-4 h-full flex flex-col">
+                <img class="w-full rounded-lg shadow-lg mb-4" src="MathCapture/assets/images/en/visual_mode.png" alt="Visual Editing Mode">
+                <h4 class="text-xl font-bold text-gray-800 mb-3">Visual Editing Mode</h4>
+                <p id="id_feature_list_VisualEditingMode_feature_value" class="text-gray-600 text-sm flex-grow">
+                  Edit formulas visually without LaTeX code. Supports exporting to LaTeX and MathML formats.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
         <!-- End of Multiple Editing Modes for Different Needs -->
-          <!-- Built-in Recognition Engines -->
-         <div class="w-full p-6">
-           <div class="text-center mb-8">
-             <h3 id="id_feature_list_RecognitionEngines_feature_name" class="text-3xl text-gray-800 font-bold leading-none mb-3">
-               Built-in Recognition Engines
-             </h3>
-             <p id="id_feature_list_RecognitionEngines_feature_value" class="text-gray-600 mb-8 max-w-4xl mx-auto">
-               Equation Recognition: Convert math Equation images into LaTeX code instantly. Works fully offline.<br>
-               Symbol Recognition: Identify mathematical symbols quickly and accurately.<br>
-             </p>
-           </div>
-          <div class="flex flex-col md:flex-row justify-center items-center gap-8">
-            <div class="flex flex-col items-center max-w-sm">
-              <img class="w-full rounded-lg shadow-xl ring-1 ring-black ring-opacity-5 mb-3" src="MathCapture/assets/images/en/equation_recognition.png" alt="Word Plugin">
-              <p class="text-center text-sm text-gray-600 font-medium">Formula Recognition</p>
+        <!-- Built-in Recognition Engines -->
+        <div class="w-full p-6 mb-12">
+          <div class="text-center mb-12">
+            <h3 id="id_feature_list_RecognitionEngines_feature_name" class="text-3xl text-gray-800 font-bold leading-none mb-3">
+              Built-in Recognition Engines
+            </h3>
+            <p id="id_feature_list_RecognitionEngines_feature_value" class="text-gray-600 mb-8 max-w-4xl mx-auto">
+              Equation Recognition: Convert math Equation images into LaTeX code instantly. Works fully offline.<br>
+              Symbol Recognition: Identify mathematical symbols quickly and accurately.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="text-center">
+              <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-8 h-full flex flex-col">
+                <img class="w-full rounded-lg shadow-lg mb-6" src="MathCapture/assets/images/en/equation_recognition.png" alt="Formula Recognition">
+                <h4 id="id_feature_list_FormulaRecognition_feature_name" class="text-2xl font-bold text-gray-800 mb-4">Formula Recognition</h4>
+                <p id="id_feature_list_FormulaRecognition_feature_value" class="text-gray-600 flex-grow">Convert math equation images into LaTeX code instantly. Works fully offline.</p>
+              </div>
             </div>
-            <div class="flex flex-col items-center max-w-sm">
-              <img class="w-full rounded-lg shadow-xl ring-1 ring-black ring-opacity-5 mb-3" src="MathCapture/assets/images/en/symbol_recognition.png" alt="PowerPoint Plugin">
-              <p class="text-center text-sm text-gray-600 font-medium">Symbol Recognition</p>
+            <div class="text-center">
+              <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg p-8 h-full flex flex-col">
+                <img class="w-full rounded-lg shadow-lg mb-6" src="MathCapture/assets/images/en/symbol_recognition.png" alt="Symbol Recognition">
+                <h4 id="id_feature_list_SymbolRecognition_feature_name" class="text-2xl font-bold text-gray-800 mb-4">Symbol Recognition</h4>
+                <p id="id_feature_list_SymbolRecognition_feature_value" class="text-gray-600 flex-grow">Identify mathematical symbols quickly and accurately.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -447,6 +463,12 @@
             if (data["Built-in Recognition Engines"]) {
               document.getElementById('id_feature_list_RecognitionEngines_feature_name').innerText = data["Built-in Recognition Engines"];
             }
+            if (data["Formula Recognition"]) {
+              document.getElementById('id_feature_list_FormulaRecognition_feature_name').innerText = data["Formula Recognition"];
+            }
+            if (data["Symbol Recognition"]) {
+              document.getElementById('id_feature_list_SymbolRecognition_feature_name').innerText = data["Symbol Recognition"];
+            }
             if (data["Instant LaTeX Mode"]) {
               document.getElementById('id_feature_list_InstantLatexMode_feature_value').innerText = data["Instant LaTeX Mode"];
             }
@@ -461,6 +483,12 @@
             }
             if (data["feature_list_RecognitionEngines_feature_value"]) {
               document.getElementById('id_feature_list_RecognitionEngines_feature_value').innerText = data["feature_list_RecognitionEngines_feature_value"];
+            }
+            if (data["feature_list_FormulaRecognition_feature_value"]) {
+              document.getElementById('id_feature_list_FormulaRecognition_feature_value').innerText = data["feature_list_FormulaRecognition_feature_value"];
+            }
+            if (data["feature_list_SymbolRecognition_feature_value"]) {
+              document.getElementById('id_feature_list_SymbolRecognition_feature_value').innerText = data["feature_list_SymbolRecognition_feature_value"];
             }
             if (data["feature_list_InstantLatexMode_feature_value"]) {
               document.getElementById('id_feature_list_InstantLatexMode_feature_value').innerText = data["feature_list_InstantLatexMode_feature_value"];
