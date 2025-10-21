@@ -239,6 +239,40 @@
           </div>
         </div>
         <!-- End of Seamless Integration with Microsoft Office -->
+        <!-- Multiple Editing Modes for Different Needs -->
+        <div class="w-full p-6">
+          <div class="text-center mb-8">
+            <h3 id="id_feature_list_EditingModes_feature_name" class="text-3xl text-gray-800 font-bold leading-none mb-3">
+              Multiple Editing Modes for Different Needs
+            </h3>
+          </div>
+
+           <div class="text-center mb-8">
+             <h4 id="id_feature_list_InstantLatexMode_feature_value" class="text-gray-600 mb-8 max-w-4xl mx-auto">
+               Instant LaTeX Mode: Write LaTeX formulas with real-time rendering — no compilation delay.
+             </h4>
+            <img class="w-full rounded-lg shadow-xl ring-1 ring-black ring-opacity-5 mb-3" src="MathCapture/assets/images/en/latex_express_render.png" alt="Word Plugin">
+            <p class="text-center text-sm text-gray-600 font-medium">Instant LaTeX Mode</p>
+          </div>
+
+           <div class="text-center mb-8">
+             <p id="id_feature_list_StandardLatexMode_feature_value" class="text-gray-600 mb-8 max-w-4xl mx-auto">
+               Standard LaTeX Mode: Use professional LaTeX engines (XeLaTeX, PdfLaTeX, LuaLaTeX) with full package support, including tikz (graphics), mhchem (chemistry), and algorithm (pseudocode).
+             </p>
+            <img class="w-full rounded-lg shadow-xl ring-1 ring-black ring-opacity-5 mb-3" src="MathCapture/assets/images/en/latex_standard_render.png" alt="Word Plugin">
+            <p class="text-center text-sm text-gray-600 font-medium">Standard LaTeX Mode</p>
+          </div>
+
+
+           <div class="text-center mb-8">
+             <p id="id_feature_list_VisualEditingMode_feature_value" class="text-gray-600 mb-8 max-w-4xl mx-auto">
+               Visual Editing Mode: Edit formulas visually without LaTeX code. Supports exporting to LaTeX and MathML formats.
+             </p>
+            <img class="w-full rounded-lg shadow-xl ring-1 ring-black ring-opacity-5 mb-3" src="MathCapture/assets/images/en/visual_mode.png" alt="Word Plugin">
+            <p class="text-center text-sm text-gray-600 font-medium">Visual Editing Mode</p>
+          </div>
+        </div>
+        <!-- End of Multiple Editing Modes for Different Needs -->
 
       </div>
     </section>
@@ -489,6 +523,18 @@
             if (data["Microsoft Office Integration"]) {
               document.getElementById('id_feature_list_MicrosoftOfficeIntegration_feature_name').innerText = data["Microsoft Office Integration"];
             }
+            if (data["Multiple Editing Modes"]) {
+              document.getElementById('id_feature_list_EditingModes_feature_name').innerText = data["Multiple Editing Modes"];
+            }
+            if (data["Instant LaTeX Mode"]) {
+              document.getElementById('id_feature_list_InstantLatexMode_feature_value').innerText = data["Instant LaTeX Mode"];
+            }
+            if (data["Standard LaTeX Mode"]) {
+              document.getElementById('id_feature_list_StandardLatexMode_feature_value').innerText = data["Standard LaTeX Mode"];
+            }
+            if (data["Visual Editing Mode"]) {
+              document.getElementById('id_feature_list_VisualEditingMode_feature_value').innerText = data["Visual Editing Mode"];
+            }
             if (data["feature_list_MathFormulaRecognition_feature_value"]) {
               document.getElementById('id_feature_list_MathFormulaRecognition_feature_value').innerText = data["feature_list_MathFormulaRecognition_feature_value"];
             }
@@ -509,6 +555,15 @@
             }
             if (data["feature_list_MicrosoftOfficeIntegration_feature_value"]) {
               document.getElementById('id_feature_list_MicrosoftOfficeIntegration_feature_value').innerText = data["feature_list_MicrosoftOfficeIntegration_feature_value"];
+            }
+            if (data["feature_list_InstantLatexMode_feature_value"]) {
+              document.getElementById('id_feature_list_InstantLatexMode_feature_value').innerText = data["feature_list_InstantLatexMode_feature_value"];
+            }
+            if (data["feature_list_StandardLatexMode_feature_value"]) {
+              document.getElementById('id_feature_list_StandardLatexMode_feature_value').innerText = data["feature_list_StandardLatexMode_feature_value"];
+            }
+            if (data["feature_list_VisualEditingMode_feature_value"]) {
+              document.getElementById('id_feature_list_VisualEditingMode_feature_value').innerText = data["feature_list_VisualEditingMode_feature_value"];
             }
             if (data["id_title1_value"]) {
               document.getElementById('id_title1').innerText = data["id_title1_value"];
