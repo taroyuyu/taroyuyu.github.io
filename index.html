@@ -157,65 +157,6 @@
             </div>
           </div>
         </div>
-        <div class="flex flex-wrap">
-          <div class="w-5/6 sm:w-1/2 p-6">
-            <h3 id="id_feature_list_MathFormulaAnnotation_feature_name" class="text-3xl text-gray-800 font-bold leading-none mb-3">
-              Math Formula Annotation
-            </h3>
-            <p id="id_feature_list_MathFormulaAnnotation_feature_value" class="text-gray-600 mb-8">
-              Add annotations to highlight key points and improve clarity. <br>Make your formulas more accessible and engaging!
-            </p>
-          </div>
-          <div class="w-full sm:w-1/2 p-6">
-            <img class="mx-auto w-full rounded-lg shadow-xl ring-1 ring-black ring-opacity-5" src="MathFormulaAnnotation.png">
-          </div>
-        </div>
-        <div class="flex flex-wrap flex-col-reverse sm:flex-row">
-          <div class="w-full sm:w-1/2 p-6 mt-6">
-            <img class="mx-auto w-full rounded-lg shadow-xl ring-1 ring-black ring-opacity-5" src="MathFormulaEditor.png">
-          </div>
-          <div class="w-full sm:w-1/2 p-6 mt-6">
-            <div class="align-middle">
-              <h3 id="id_feature_list_MathFormulaEditor_feature_name" class="text-3xl text-gray-800 font-bold leading-none mb-3">
-              Equation Editor
-              </h3>
-              <p id="id_feature_list_MathFormulaEditor_feature_value" class="text-gray-600 mb-8">
-                Write mathematical expressions with ease, without having to learn Latex. Make writing formulas a breeze!
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="flex flex-wrap">
-          <div class="w-5/6 sm:w-1/2 p-6">
-            <h3 id="id_feature_list_MathFormulaPoster_feature_name" class="text-3xl text-gray-800 font-bold leading-none mb-3">
-              Math Formula Poster
-            </h3>
-            <p id="id_feature_list_MathFormulaPoster_feature_value" class="text-gray-600 mb-8">
-              Turn your mathematical expressions into stunning cards, perfect for sharing and discussing ideas with ease.
-            </p>
-          </div>
-          <div class="w-full sm:w-1/2 p-6">
-            <img class="mx-auto w-full rounded-lg shadow-xl ring-1 ring-black ring-opacity-5" src="MathFormulaPoster.png">
-          </div>
-        </div>
-
-        <!-- Math Formula Render -->
-        <div class="flex flex-wrap flex-col-reverse sm:flex-row">
-          <div class="w-full sm:w-1/2 p-6 mt-6">
-            <img class="mx-auto w-full rounded-lg shadow-xl ring-1 ring-black ring-opacity-5" src="MathFormulaEditor.png">
-          </div>
-          <div class="w-full sm:w-1/2 p-6 mt-6">
-            <div class="align-middle">
-              <h3 id="id_feature_list_MathFormulaRender_feature_name" class="text-3xl text-gray-800 font-bold leading-none mb-3">
-                Math Formula Render
-              </h3>
-              <p id="id_feature_list_MathFormulaRender_feature_value" class="text-gray-600 mb-8">
-                Without the need for a bulky Latex distribution, experience real-time rendering of Latex equations.
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- End of Math Formula Render -->
         <!-- Seamless Integration with Microsoft Office -->
         <div class="w-full p-6">
           <div class="text-center mb-8">
@@ -508,18 +449,6 @@
             if (data["Math Symbol Recognition"]) {
               document.getElementById('id_feature_list_MathSymbolRecognition_feature_name').innerText = data["Math Symbol Recognition"];
             }
-            if (data["Math Formula Annotation"]) {
-              document.getElementById('id_feature_list_MathFormulaAnnotation_feature_name').innerText = data["Math Formula Annotation"];
-            }
-            if (data["Math Formula Editor"]) {
-              document.getElementById('id_feature_list_MathFormulaEditor_feature_name').innerText = data["Math Formula Editor"];
-            }
-            if (data["Math Formula Poster"]) {
-              document.getElementById('id_feature_list_MathFormulaPoster_feature_name').innerText = data["Math Formula Poster"];
-            }
-            if (data["Math Formula Render"]) {
-              document.getElementById('id_feature_list_MathFormulaRender_feature_name').innerText = data["Math Formula Render"];
-            }
             if (data["Microsoft Office Integration"]) {
               document.getElementById('id_feature_list_MicrosoftOfficeIntegration_feature_name').innerText = data["Microsoft Office Integration"];
             }
@@ -540,18 +469,6 @@
             }
             if (data["feature_list_MathSymbolRecognition_feature_value"]) {
               document.getElementById('id_feature_list_MathSymbolRecognition_feature_value').innerText = data["feature_list_MathSymbolRecognition_feature_value"];
-            }
-            if (data["feature_list_MathFormulaAnnotation_feature_value"]) {
-              document.getElementById('id_feature_list_MathFormulaAnnotation_feature_value').innerText = data["feature_list_MathFormulaAnnotation_feature_value"];
-            }
-            if (data["feature_list_MathFormulaEditor_feature_value"]) {
-              document.getElementById('id_feature_list_MathFormulaEditor_feature_value').innerText = data["feature_list_MathFormulaEditor_feature_value"];
-            }
-            if (data["feature_list_MathFormulaPoster_feature_value"]) {
-              document.getElementById('id_feature_list_MathFormulaPoster_feature_value').innerText = data["feature_list_MathFormulaPoster_feature_value"];
-            }
-            if (data["feature_list_MathFormulaRender_feature_value"]) {
-              document.getElementById('id_feature_list_MathFormulaRender_feature_value').innerText = data["feature_list_MathFormulaRender_feature_value"];
             }
             if (data["feature_list_MicrosoftOfficeIntegration_feature_value"]) {
               document.getElementById('id_feature_list_MicrosoftOfficeIntegration_feature_value').innerText = data["feature_list_MicrosoftOfficeIntegration_feature_value"];
