@@ -788,9 +788,10 @@
           heroBtn.setAttribute('onclick', "window.location.href='https://apps.apple.com/us/app/mathcapture365-equation-editor/id6753909547'");
           navBtn.setAttribute('onclick', "window.location.href='https://apps.apple.com/us/app/mathcapture365-equation-editor/id6753909547'");
         } else {
-          // Windows - placeholder link
-          heroBtn.setAttribute('onclick', "window.location.href='#'");
-          navBtn.setAttribute('onclick', "window.location.href='#'");
+          // Windows 下载链接
+          const winUrl = 'https://release-assets.githubusercontent.com/github-production-release-asset/733554946/0c639d28-a274-4ec3-ae96-84765de48c34?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-06-25T11%3A53%3A31Z&rscd=attachment%3B+filename%3DMathCapture-1.0.0-win64-setup.exe&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-06-25T10%3A52%3A44Z&ske=2026-06-25T11%3A53%3A31Z&sks=b&skv=2018-11-09&sig=8Y05APNg5TkVtJ9zYbgMm%2F2drrVQDJn3xzOf1Hc2NDI%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4MjM4OTgyMCwibmJmIjoxNzgyMzg2MjIwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ZY4HawsE6fWG3FvSeFjk8Jaxa13Q_p_TsGLUjibLWJI&response-content-disposition=attachment%3B%20filename%3DMathCapture-1.0.0-win64-setup.exe&response-content-type=application%2Foctet-stream';
+          heroBtn.setAttribute('onclick', "window.location.href='" + winUrl + "'");
+          navBtn.setAttribute('onclick', "window.location.href='" + winUrl + "'");
         }
         
         // Update button text based on current language
