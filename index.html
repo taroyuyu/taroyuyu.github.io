@@ -244,6 +244,12 @@
                 </svg>
                 Windows
               </button>
+              <button onclick="switchPlatform('linux')" id="btn-linux">
+                <svg class="inline-block w-4 h-4 mr-1" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M3 3h18v18H3V3zm2 3v2h14V6H5zm0 4v2h10v-2H5zm0 4v2h14v-2H5z"/>
+                </svg>
+                Linux
+              </button>
             </div>
           </div>
           <button
@@ -736,13 +742,18 @@
         // Update toggle buttons
         const btnMac = document.getElementById('btn-macos');
         const btnWin = document.getElementById('btn-windows');
+        const btnLinux = document.getElementById('btn-linux');
+        
+        btnMac.classList.remove('active');
+        btnWin.classList.remove('active');
+        btnLinux.classList.remove('active');
         
         if (platform === 'macos') {
           btnMac.classList.add('active');
-          btnWin.classList.remove('active');
-        } else {
+        } else if (platform === 'windows') {
           btnWin.classList.add('active');
-          btnMac.classList.remove('active');
+        } else {
+          btnLinux.classList.add('active');
         }
         
         // Update feature images
@@ -787,11 +798,15 @@
         if (platform === 'macos') {
           heroBtn.setAttribute('onclick', "window.location.href='https://apps.apple.com/us/app/mathcapture365-equation-editor/id6753909547'");
           navBtn.setAttribute('onclick', "window.location.href='https://apps.apple.com/us/app/mathcapture365-equation-editor/id6753909547'");
-        } else {
+        } else if (platform === 'windows') {
           // Windows 下载链接
           const winUrl = 'https://github.com/taroyuyu/taroyuyu.github.io/releases/download/win/MathCapture-1.0.0-win64-setup.exe';
           heroBtn.setAttribute('onclick', "window.location.href='" + winUrl + "'");
           navBtn.setAttribute('onclick', "window.location.href='" + winUrl + "'");
+        } else {
+          // Linux 下载链接（暂时为空）
+          heroBtn.setAttribute('onclick', "window.location.href=''");
+          navBtn.setAttribute('onclick', "window.location.href=''");
         }
         
         // Update button text based on current language
@@ -810,13 +825,21 @@
             heroBtn.textContent = 'Download for macOS';
             navBtn.textContent = 'Download for macOS';
           }
-        } else {
+        } else if (currentPlatform === 'windows') {
           if (currentLanguage === 'zh') {
             heroBtn.textContent = '下载 Windows 版';
             navBtn.textContent = '下载 Windows 版';
           } else {
             heroBtn.textContent = 'Download for Windows';
             navBtn.textContent = 'Download for Windows';
+          }
+        } else {
+          if (currentLanguage === 'zh') {
+            heroBtn.textContent = '下载 Linux 版';
+            navBtn.textContent = '下载 Linux 版';
+          } else {
+            heroBtn.textContent = 'Download for Linux';
+            navBtn.textContent = 'Download for Linux';
           }
         }
       }
