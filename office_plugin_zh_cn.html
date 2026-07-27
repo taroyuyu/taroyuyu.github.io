@@ -356,7 +356,7 @@
 						<p>将下方命令完整复制到终端中，按回车运行。<br>这段命令不会破坏您的计算机，也不会窃取任何信息。仅仅是因为WPS的Mac版本目前还不支持在线安装WPS插件，需要通过命令手动安装。如果您很担心，可以问一下DeepSeek或者您所信任的AI工具。这个命令仅仅是告知WPS启动的时候需要加载我们的MathCapture插件。</p>
 						<div class="code">
 							<button class="copy" id="copyBtn">复制</button>
-							<pre id="cmd">mkdir -p "$HOME/Library/Containers/com.kingsoft.wpsoffice.mac/Data/.kingsoft/wps/jsaddons" &amp;&amp; echo '&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;jsplugins&gt;&lt;jspluginonline name="MathCapturePluginForWPS" type="wps" url="http://127.0.0.1:9079/" debug="" enable="enable_dev" install="null"/&gt;&lt;jspluginonline name="MathCapturePluginForWPS" type="wpp" url="http://127.0.0.1:9079/" debug="" enable="enable_dev" install="null"/&gt;&lt;/jsplugins&gt;' &gt; "$HOME/Library/Containers/com.kingsoft.wpsoffice.mac/Data/.kingsoft/wps/jsaddons/publish.xml" &amp;&amp; echo "[SUCCESS] WPS Plugin installed successfully! Please restart WPS Office"</pre>
+							<pre id="cmd">mkdir -p "$HOME/Library/Containers/com.kingsoft.wpsoffice.mac/Data/.kingsoft/wps/jsaddons" &amp;&amp; echo '&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;jsplugins&gt;&lt;jspluginonline name="MathCapturePluginForWPS" type="wps" url="http://127.0.0.1:9077/" debug="" enable="enable_dev" install="null"/&gt;&lt;jspluginonline name="MathCapturePluginForWPS" type="wpp" url="http://127.0.0.1:9077/" debug="" enable="enable_dev" install="null"/&gt;&lt;/jsplugins&gt;' &gt; "$HOME/Library/Containers/com.kingsoft.wpsoffice.mac/Data/.kingsoft/wps/jsaddons/publish.xml" &amp;&amp; echo "[SUCCESS] WPS Plugin installed successfully! Please restart WPS Office"</pre>
 						</div>
 					</li>
 
