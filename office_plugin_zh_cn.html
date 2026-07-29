@@ -247,6 +247,43 @@
 		background: #2e7d32;
 		color: #fff;
 	}
+	/* TabBar styles */
+	.tab-bar {
+		display: flex;
+		border-bottom: 2px solid #e0e0e0;
+		margin: 16px 0 0;
+	}
+	.tab-bar .tab {
+		padding: 10px 24px;
+		font-size: 14px;
+		font-weight: 600;
+		color: #888;
+		background: none;
+		border: none;
+		border-bottom: 2px solid transparent;
+		margin-bottom: -2px;
+		cursor: pointer;
+		transition: color 0.2s, border-color 0.2s;
+		outline: none;
+	}
+	.tab-bar .tab:hover {
+		color: #555;
+	}
+	.tab-bar .tab.active {
+		color: #4285f4;
+		border-bottom-color: #4285f4;
+	}
+	.tab-content {
+		display: none;
+		padding-top: 16px;
+	}
+	.tab-content.active {
+		display: block;
+	}
+	.tab-content ol {
+		margin: 0;
+		padding-left: 20px;
+	}
 
 	</style>
 </head>
@@ -345,27 +382,65 @@
 
 			<div id="install-wps-plugin">
 				<h3>为 WPS Office 安装插件</h3>
-				<ol>
-					<li>
-						<strong>打开终端</strong>
-						<p>在「启动台」中搜索并打开「终端」(Terminal) 应用。</p>
-					</li>
+				<div class="tab-bar" id="wps-tab-bar">
+					<button class="tab active" data-tab="macos">macOS</button>
+					<button class="tab" data-tab="harmonyos">HarmonyOS</button>
+				</div>
 
-					<li>
-						<strong>粘贴并执行安装命令</strong>
-						<p>将下方命令完整复制到终端中，按回车运行。<br>这段命令不会破坏您的计算机，也不会窃取任何信息。仅仅是因为WPS的Mac版本目前还不支持在线安装WPS插件，需要通过命令手动安装。如果您很担心，可以问一下DeepSeek或者您所信任的AI工具。这个命令仅仅是告知WPS启动的时候需要加载我们的MathCapture插件。</p>
-						<div class="code">
-							<button class="copy" id="copyBtn">复制</button>
-							<pre id="cmd">mkdir -p "$HOME/Library/Containers/com.kingsoft.wpsoffice.mac/Data/.kingsoft/wps/jsaddons" &amp;&amp; echo '&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;jsplugins&gt;&lt;jspluginonline name="MathCapturePluginForWPS" type="wps" url="http://127.0.0.1:9077/" debug="" enable="enable_dev" install="null"/&gt;&lt;jspluginonline name="MathCapturePluginForWPS" type="wpp" url="http://127.0.0.1:9077/" debug="" enable="enable_dev" install="null"/&gt;&lt;/jsplugins&gt;' &gt; "$HOME/Library/Containers/com.kingsoft.wpsoffice.mac/Data/.kingsoft/wps/jsaddons/publish.xml" &amp;&amp; echo "[SUCCESS] WPS Plugin installed successfully! Please restart WPS Office"</pre>
-						</div>
-					</li>
+				<!-- macOS 安装步骤 -->
+				<div class="tab-content active" id="tab-macos">
+					<ol>
+						<li>
+							<strong>打开终端</strong>
+							<p>在「启动台」中搜索并打开「终端」(Terminal) 应用。</p>
+						</li>
+						<li>
+							<strong>粘贴并执行安装命令</strong>
+							<p>将下方命令完整复制到终端中，按回车运行。<br>这段命令不会破坏您的计算机，也不会窃取任何信息。仅仅是因为WPS的Mac版本目前还不支持在线安装WPS插件，需要通过命令手动安装。如果您很担心，可以问一下DeepSeek或者您所信任的AI工具。这个命令仅仅是告知WPS启动的时候需要加载我们的MathCapture插件。</p>
+							<div class="code">
+								<button class="copy">复制</button>
+								<pre>mkdir -p "$HOME/Library/Containers/com.kingsoft.wpsoffice.mac/Data/.kingsoft/wps/jsaddons" &amp;&amp; echo '&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;jsplugins&gt;&lt;jspluginonline name="MathCapturePluginForWPS" type="wps" url="http://127.0.0.1:9077/" debug="" enable="enable_dev" install="null"/&gt;&lt;jspluginonline name="MathCapturePluginForWPS" type="wpp" url="http://127.0.0.1:9077/" debug="" enable="enable_dev" install="null"/&gt;&lt;/jsplugins&gt;' &gt; "$HOME/Library/Containers/com.kingsoft.wpsoffice.mac/Data/.kingsoft/wps/jsaddons/publish.xml" &amp;&amp; echo "[SUCCESS] WPS Plugin installed successfully! Please restart WPS Office"</pre>
+							</div>
+						</li>
+						<li>
+							<strong>启动MathCapture，然后重启 WPS</strong>
+							<p>命令执行成功后，启动MathCapture，然后重新启动 WPS Office 即可在功能区看到本加载项。<br>要想在WPS中看到我们的MathCapture插件，需要确保MathCapture在WPS启动之前已经启动了。因为WPS需要跟我们的MathCapture进行通信，才能加载我们的MathCapture插件。</p>
+							<img src="/office_plugin/resource/zh/WPSOfficePlugin_zh.jpg" alt="WPSOfficePlugin">
+						</li>
+					</ol>
+				</div>
 
-					<li>
-						<strong>启动MathCapture，然后重启 WPS</strong>
-						<p>命令执行成功后,启动MathCapture，然后重新启动 WPS Office 即可在功能区看到本加载项。<br>要想在WPS中看到我们的MathCapture插件，需要确保MathCapture在WPS启动之前已经启动了。因为WPS需要跟我们的MathCapture进行通信，才能加载我们的MathCapture插件。</p>
-						<img src="/office_plugin/resource/zh/WPSOfficePlugin_zh.jpg" alt="WPSOfficePlugin">
-					</li>
-				</ol>
+				<!-- HarmonyOS 安装步骤 -->
+				<div class="tab-content" id="tab-harmonyos">
+					<ol>
+						<li>
+							打开<strong>文件浏览器</strong>
+							<img src="/office_plugin/resource/zh/HarmonyOSWPSOfficePlugin01_zh.jpg" alt="打开文件浏览器">
+						</li>
+						<li>
+							进入到WPS插件目录（文件夹），路径是<strong>/storage/Users/currentUser/appdata/el2/base/cn.wps.office.hap/files/kingsoft/wps/jsaddons</strong>
+							<img src="/office_plugin/resource/zh/HarmonyOSWPSOfficePlugin02_zh.jpg" alt="进入WPS插件目录">
+						</li>
+						<li>
+							鼠标右击，创建一个文本文档。随后点击该文件，鼠标右击，选择“<strong>重命名</strong>”，将该文本文档的名称修改为<strong>publish.xml</strong>
+							<img src="/office_plugin/resource/zh/HarmonyOSWPSOfficePlugin03_zh.jpg" alt="创建public.xml文件">
+						</li>
+						<li>
+							<p>将下面的内容复制到<strong>publish.xml</strong>文件中</p>
+							<div class="code">
+								<button class="copy">复制</button>
+								<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;jsplugins&gt;&lt;jspluginonline name="MathCapturePluginForWPS" type="wps" url="http://127.0.0.1:9077/" debug="" enable="enable_dev" install="null"/&gt;&lt;jspluginonline name="MathCapturePluginForWPS" type="wpp" url="http://127.0.0.1:9077/" debug="" enable="enable_dev" install="null"/&gt;&lt;/jsplugins&gt;</pre>
+							</div>
+							<img src="/office_plugin/resource/zh/HarmonyOSWPSOfficePlugin04_zh.jpg" alt="填充public.xml文件">
+						</li>
+						<li>
+							<strong>启动MathCapture，然后重启 WPS</strong>
+							<p>命令执行成功后，启动MathCapture，然后重新启动 WPS Office 即可在功能区看到本加载项。<br>要想在WPS中看到我们的MathCapture插件，需要确保MathCapture在WPS启动之前已经启动了。因为WPS需要跟我们的MathCapture进行通信，才能加载我们的MathCapture插件。</p>
+							<img src="/office_plugin/resource/zh/HarmonyOSWPSOfficePlugin05_zh.jpg" alt="WPSOfficePlugin">
+						</li>
+					</ol>
+				</div>
+
 				<p>📺 观看视频教程：<a href="https://mp.weixin.qq.com/s/xmfl24dX7ZrNQfJDu8j-XQ" target="_blank" rel="noopener">WPS 插件安装视频指引</a></p>
 				<p>如果安装失败，可以跟我们联系，我们会远程协助您安装我们的插件。但我们只为付费用户提供技术支持。
 					<ul>
@@ -377,28 +452,50 @@
 		</div>
 	</div>
 
-	    <script>
+	<script>
+        // TabBar 切换逻辑
         (function () {
-            var btn = document.getElementById('copyBtn');
-            var cmd = document.getElementById('cmd');
-            if (!btn || !cmd) return;
-            btn.addEventListener('click', function () {
-                var text = cmd.textContent;
-                var done = function () {
-                    btn.textContent = '已复制';
-                    btn.classList.add('done');
-                    setTimeout(function () { btn.textContent = '复制'; btn.classList.remove('done'); }, 1600);
-                };
-                if (navigator.clipboard && navigator.clipboard.writeText) {
-                    navigator.clipboard.writeText(text).then(done, function () {
-                        window.getSelection().selectAllChildren(cmd);
+            var tabBar = document.getElementById('wps-tab-bar');
+            if (!tabBar) return;
+            var tabs = tabBar.querySelectorAll('.tab');
+            tabs.forEach(function (tab) {
+                tab.addEventListener('click', function () {
+                    var targetId = 'tab-' + this.getAttribute('data-tab');
+                    // 切换标签激活状态
+                    tabs.forEach(function (t) { t.classList.remove('active'); });
+                    this.classList.add('active');
+                    // 切换内容面板
+                    document.querySelectorAll('.tab-content').forEach(function (panel) {
+                        panel.classList.remove('active');
                     });
-                } else {
-                    window.getSelection().selectAllChildren(cmd);
-                }
+                    var target = document.getElementById(targetId);
+                    if (target) target.classList.add('active');
+                });
             });
         })();
 
+        // 复制按钮：支持所有代码块
+        (function () {
+            document.querySelectorAll('.code .copy').forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    var pre = this.parentElement.querySelector('pre');
+                    if (!pre) return;
+                    var text = pre.textContent;
+                    var done = function () {
+                        btn.textContent = '已复制';
+                        btn.classList.add('done');
+                        setTimeout(function () { btn.textContent = '复制'; btn.classList.remove('done'); }, 1600);
+                    };
+                    if (navigator.clipboard && navigator.clipboard.writeText) {
+                        navigator.clipboard.writeText(text).then(done, function () {
+                            window.getSelection().selectAllChildren(pre);
+                        });
+                    } else {
+                        window.getSelection().selectAllChildren(pre);
+                    }
+                });
+            });
+        })();
     </script>
 </body>
 </html>
