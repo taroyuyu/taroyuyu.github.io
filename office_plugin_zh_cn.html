@@ -386,6 +386,7 @@
 					<button class="tab active" data-tab="macos">macOS</button>
 					<button class="tab" data-tab="windows">Windows</button>
 					<button class="tab" data-tab="harmonyos">HarmonyOS</button>
+					<button class="tab" data-tab="linux">Linux</button>
 				</div>
 
 				<!-- macOS 安装步骤 -->
@@ -483,6 +484,39 @@
 					</ol>
 
 					<p>📺 观看视频教程：<a href="https://www.bilibili.com/video/BV145326zEPN/?vd_source=279094d9de0a3880c01b1c2eafcaaef6" target="_blank" rel="noopener">WPS 插件安装视频指引</a></p>
+					<p>如果安装失败，可以跟我们联系，我们会远程协助您安装我们的插件。但我们只为付费用户提供技术支持。
+						<ul>
+							<li>电子邮件:taroyuyu@icloud.com</li>
+							<li>微信:MathCaptureTech<br>这里的微信指的是微信账号（头像是哈密瓜，可以直接添加我们为联系人），不是微信公众号。我们的微信公众号叫MathCapture科技</li>
+						</ul>
+					</p>
+				</div>
+
+				<!-- Linux 安装步骤 -->
+				<div class="tab-content" id="tab-linux">
+					<ol>
+						<li>
+							打开<strong>文件浏览器</strong>
+						</li>
+						<li>
+							进入到WPS插件目录（文件夹），路径是<strong>~/.local/share/kingsoft/wps/jsaddons</strong>
+						</li>
+						<li>
+							鼠标右击，创建一个文本文档。随后点击该文件，鼠标右击，选择“<strong>重命名</strong>”，将该文本文档的名称修改为<strong>publish.xml</strong>
+						</li>
+						<li>
+							<p>将下面的内容复制到<strong>publish.xml</strong>文件中</p>
+							<div class="code">
+								<button class="copy">复制</button>
+								<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;jsplugins&gt;&lt;jspluginonline name="MathCapturePluginForWPS" type="wps" url="http://127.0.0.1:9077/" debug="" enable="enable_dev" install="null"/&gt;&lt;jspluginonline name="MathCapturePluginForWPS" type="wpp" url="http://127.0.0.1:9077/" debug="" enable="enable_dev" install="null"/&gt;&lt;/jsplugins&gt;</pre>
+							</div>
+						</li>
+						<li>
+							<strong>启动MathCapture，然后重启 WPS</strong>
+							<p>命令执行成功后，启动MathCapture，然后重新启动 WPS Office 即可在功能区看到本加载项。<br>要想在WPS中看到我们的MathCapture插件，需要确保MathCapture在WPS启动之前已经启动了。因为WPS需要跟我们的MathCapture进行通信，才能加载我们的MathCapture插件。</p>
+						</li>
+					</ol>
+
 					<p>如果安装失败，可以跟我们联系，我们会远程协助您安装我们的插件。但我们只为付费用户提供技术支持。
 						<ul>
 							<li>电子邮件:taroyuyu@icloud.com</li>
