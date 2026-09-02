@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Pricing - MathCapture</title>
+    <meta name="description" content="MathCapture Pricing - Subscription and one-time purchase options for macOS, iOS, Windows 10/11, Linux, and HarmonyOS." />
+    <meta name="keywords" content="MathCapture pricing, MathCapture pro, equation editor pricing, formula recognition pricing" />
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
+    <style>
+      .gradient {
+        background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+      }
+
+      /* FAQ accordion */
+      .faq-item .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+      }
+      .faq-item.open .faq-answer {
+        max-height: 500px;
+        padding-top: 0.75rem;
+      }
+      .faq-item .faq-chevron {
+        transition: transform 0.3s ease;
+      }
+      .faq-item.open .faq-chevron {
+        transform: rotate(180deg);
+      }
+
+      /* Reseller modal */
+      .reseller-modal {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+      }
+      .reseller-modal.open {
+        display: flex;
+      }
+      .reseller-modal-content {
+        background: #fff;
+        border-radius: 1rem;
+        max-width: 28rem;
+        width: 100%;
+        max-height: 85vh;
+        overflow-y: auto;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        animation: modalFadeIn 0.2s ease;
+      }
+      @keyframes modalFadeIn {
+        from { opacity: 0; transform: scale(0.95); }
+        to   { opacity: 1; transform: scale(1); }
+      }
+    </style>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GPK5E2ME0C"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-GPK5E2ME0C');
+    </script>
+  </head>
+  <body class="leading-normal tracking-normal text-white gradient" style="font-family: 'Source Sans Pro', sans-serif;">
+    <!--Nav-->
+    <nav id="header" class="fixed w-full z-30 top-0 text-white">
+      <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
+        <div class="pl-4 flex items-center">
+          <a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="index.html">
+            <img src="./AppIcon.png" class="h-8 fill-current inline" alt="MathCapture" />
+            MathCapture
+          </a>
+        </div>
+        <div class="block lg:hidden pr-4">
+          <button id="nav-toggle" class="flex items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+            <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <title>Menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+            </svg>
+          </button>
+        </div>
+        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content">
+          <ul class="list-reset lg:flex justify-end flex-1 items-center">
+            <li class="mr-3">
+              <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="index.html#features-section" id="id_features_1">Features</a>
+            </li>
+            <li class="mr-3">
+              <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="office_plugin.html" id="id_office_plugin">Office Plugin</a>
+            </li>
+            <li class="mr-3">
+              <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="MathCaptureGuide/MathCaptureGuide.html" id="id_guide">Guide</a>
+            </li>
+            <li class="mr-3">
+              <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="pricing.html" id="id_pricing_nav" style="font-weight: 700;">Pricing</a>
+            </li>
+            <li class="mr-3">
+              <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="index.html#support-section" id="id_support_1">Support</a>
+            </li>
+            <li class="mr-3">
+              <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="privacy_policy.html" id="id_privacy_policy">Privacy Policy</a>
+            </li>
+          </ul>
+          <button
+            id="navAction"
+            onclick="window.location.href='https://apps.apple.com/us/app/mathcapture365-equation-editor/id6753909547'"
+            class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+          >
+            Download for macOS
+          </button>
+        </div>
+      </div>
+      <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
+    </nav>
+
+    <!-- Sales Channels -->
+    <section class="bg-white border-b py-16">
+      <div class="container max-w-4xl mx-auto px-4">
+        <h2 id="id_channels_title" class="text-4xl font-bold text-center text-gray-800 mb-4">Purchase Channels</h2>
+        <div class="w-full mb-12">
+          <div class="h-1 mx-auto gradient w-64 opacity-25 rounded-t"></div>
+        </div>
+        <p id="id_channels_intro" class="text-center text-gray-500 max-w-2xl mx-auto mb-12">
+          We offer both subscription and one-time purchase options. Prices vary by region and are displayed in each channel at checkout.
+        </p>
+        <div class="flex flex-col md:flex-row justify-center items-stretch gap-8 max-w-3xl mx-auto">
+          <!-- App Store -->
+          <div class="w-full md:w-1/2 bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden flex flex-col">
+            <div class="p-8 flex-grow text-center">
+              <div class="flex justify-center mb-4">
+                <svg class="w-12 h-12 text-gray-700" viewBox="0 0 24 24" fill="currentColor"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-1.935-.117-3.65 1.026-4.61 1.026zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.674.805-3.545 1.822-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>
+              </div>
+              <h3 id="id_channel_appstore_title" class="text-xl font-bold text-gray-800 mb-2">App Store</h3>
+              <p id="id_channel_appstore_desc" class="text-gray-500 text-sm mb-6">Purchase via Apple App Store. Prices shown at checkout based on your region. Provide macOS and iOS versions.</p>
+            </div>
+            <div class="p-8 pt-0">
+              <button
+                onclick="window.location.href='https://apps.apple.com/cn/app/mathcapture365-equation-editor/id6753909547?platform=mac'"
+                class="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold rounded-full py-4 px-8 transition duration-300 hover:scale-105"
+              >
+                <span id="id_channel_appstore_btn">View on App Store</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Agent / Reseller -->
+          <div class="w-full md:w-1/2 bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden flex flex-col">
+            <div class="p-8 flex-grow text-center">
+              <div class="flex justify-center mb-4">
+                <svg class="w-12 h-12 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 10h18M7 15h.01M11 15h2m4 0h.01M3 5h18a1 1 0 011 1v12a1 1 0 01-1 1H3a1 1 0 01-1-1V6a1 1 0 011-1z" /></svg>
+              </div>
+              <h3 id="id_channel_agent_title" class="text-xl font-bold text-gray-800 mb-2">Authorized Resellers</h3>
+              <p id="id_channel_agent_desc" class="text-gray-500 text-sm mb-6">Multiple resellers available. Prices shown at checkout. Provide macOS, iOS, Windows 10/11, Linux, and HarmonyOS (HarmonyOS) versions.</p>
+            </div>
+            <div class="p-8 pt-0">
+              <button
+                onclick="openResellerModal()"
+                class="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold rounded-full py-4 px-8 transition duration-300 hover:scale-105"
+              >
+                <span id="id_channel_agent_btn">Buy via Reseller</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="bg-gray-50 border-b py-16">
+      <div class="container max-w-3xl mx-auto px-4">
+        <h2 id="id_faq_title" class="text-4xl font-bold text-center text-gray-800 mb-4">Frequently Asked Questions</h2>
+        
+        <div class="w-full mb-12">
+          <div class="h-1 mx-auto gradient w-64 opacity-25 rounded-t"></div>
+        </div>
+
+        <div class="space-y-4" id="faq-container">
+
+          <!-- FAQ 1 -->
+          <div class="faq-item border border-gray-200 rounded-lg overflow-hidden">
+            <button class="faq-trigger w-full flex justify-between items-center px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition">
+              <span id="id_faq_q1" class="font-semibold text-gray-800 text-lg">Which platforms are supported?</span>
+              <svg class="faq-chevron w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-answer px-6">
+              <p id="id_faq_a1" class="text-gray-600 pb-4">MathCapture is available for macOS, iOS, Windows 10/11, Linux, and HarmonyOS.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item border border-gray-200 rounded-lg overflow-hidden">
+            <button class="faq-trigger w-full flex justify-between items-center px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition">
+              <span id="id_faq_q2" class="font-semibold text-gray-800 text-lg">Can I get a refund?</span>
+              <svg class="faq-chevron w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-answer px-6">
+              <p id="id_faq_a2" class="text-gray-600 pb-4">We do not sell software directly. All sales and refunds are handled by the App Store or our resellers. For App Store purchases, please request a refund directly from the App Store. For reseller purchases, please contact the reseller for their refund policy.</p>
+            </div>
+          </div>
+        
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="gradient py-16 text-center">
+      <div class="container mx-auto px-4">
+        <h2 id="id_cta_title" class="text-4xl font-bold mb-4">Still have questions?</h2>
+        <p id="id_cta_subtitle" class="text-xl mb-8 opacity-90">We're here to help. Reach out and we'll get back to you.</p>
+        <button
+          id="id_cta_btn"
+          class="bg-white text-gray-800 font-bold rounded-full py-4 px-8 shadow-lg hover:scale-105 transition duration-300"
+          onclick="location.href='mailto:taroyuyu@icloud.com?subject=MathCapture Pricing Inquiry'"
+        >
+          Contact us
+        </button>
+      </div>
+    </section>
+
+    <!--Footer-->
+    <footer class="pb-8">
+      <div class="container mx-auto px-4 text-center">
+        <!-- Social Media Badges -->
+        <div class="mb-4 flex justify-center items-center space-x-4">
+          <!-- X (Twitter) -->
+          <a href="https://x.com/MathCapture_dev" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center justify-center w-12 h-12 bg-white/20 hover:bg-white/30 rounded-full transition-all duration-300 hover:scale-110 shadow-lg"
+             title="Follow us on X (Twitter)" aria-label="Follow us on X (Twitter)">
+            <svg class="w-6 h-6 fill-current text-white" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.03l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+          <!-- 小红书 (Xiaohongshu / RED) -->
+          <a href="https://www.xiaohongshu.com/user/profile/5eba77b30000000001005577" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center justify-center w-12 h-12 bg-[#FF2442] hover:bg-[#E01E3A] rounded-full transition-all duration-300 hover:scale-110 shadow-lg"
+             title="关注我们的小红书" aria-label="关注我们的小红书">
+            <svg class="w-6 h-6 fill-current text-white" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M21 4H3c-1.1 0-2 .9-2 2v13c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM3 19V6h8v13H3zm10 0V6h8v13h-8z"/>
+              <path d="M6 9.5c0-.3.2-.5.5-.5h2c.8 0 1.5.7 1.5 1.5v3c0 .3-.2.5-.5.5h-.5c-.3 0-.5-.2-.5-.5v-2.5c0-.3-.2-.5-.5-.5H6.5c-.3 0-.5-.2-.5-.5v-.5z"/>
+            </svg>
+          </a>
+          <!-- YouTube -->
+          <a href="https://www.youtube.com/@taroyuyu-kh6mc" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center justify-center w-12 h-12 bg-[#FF0000] hover:bg-[#CC0000] rounded-full transition-all duration-300 hover:scale-110 shadow-lg"
+             title="Subscribe to us on YouTube" aria-label="Subscribe to us on YouTube">
+            <svg class="w-6 h-6 fill-current text-white" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            </svg>
+          </a>
+          <!-- 哔哩哔哩 (Bilibili) -->
+          <a href="https://space.bilibili.com/3546577842997900" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center justify-center w-12 h-12 bg-[#FB7299] hover:bg-[#E55D85] rounded-full transition-all duration-300 hover:scale-110 shadow-lg"
+             title="关注我们的哔哩哔哩" aria-label="关注我们的哔哩哔哩">
+            <svg class="w-6 h-6 fill-current text-white" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M17.813 4.65h-2.853l1.68-1.977a.924.924 0 0 0-.064-1.287.883.883 0 0 0-1.274.068l-2.294 2.7-2.294-2.7a.883.883 0 0 0-1.274-.068.924.924 0 0 0-.064 1.287l1.68 1.977H8.187a3.293 3.293 0 0 0-3.249 3.329v8.27A3.293 3.293 0 0 0 8.187 19.58h9.626a3.293 3.293 0 0 0 3.249-3.329V7.98a3.293 3.293 0 0 0-3.249-3.329zm-7.523 9.594a.78.78 0 0 1-.776.784.78.78 0 0 1-.776-.784V9.226a.78.78 0 0 1 .776-.784.78.78 0 0 1 .776.784v5.018zm4.668.084a1.157 1.157 0 0 1-1.153 1.16 1.157 1.157 0 0 1-1.153-1.16v-4.35c0-.641.516-1.16 1.153-1.16.637 0 1.153.519 1.153 1.16v4.35z"/>
+            </svg>
+          </a>
+          <!-- 新浪微博 (Weibo) -->
+          <a href="https://m.weibo.cn/u/7875410057" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center justify-center w-12 h-12 bg-[#E6162D] hover:bg-[#C9141B] rounded-full transition-all duration-300 hover:scale-110 shadow-lg"
+             title="关注我们的新浪微博" aria-label="关注我们的新浪微博">
+            <svg class="w-6 h-6 fill-current text-white" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M10.098 20.323c-4.04 0-7.32-2.003-7.32-4.472 0-2.47 3.28-4.473 7.32-4.473 4.04 0 7.32 2.003 7.32 4.473 0 2.469-3.28 4.472-7.32 4.472zm.602-3.864c-1.964.193-3.66-.502-3.79-1.551-.13-1.05 1.362-2.053 3.327-2.245 1.964-.192 3.66.502 3.79 1.551.13 1.05-1.362 2.053-3.327 2.245zm-.96-1.682c-.347.07-.735-.078-.866-.332-.13-.254.067-.529.414-.599.347-.07.735.078.866.332.13.254-.067.529-.414.599zm5.7-3.455c-1.944-1.078-4.857-1.078-6.8 0-2.058 1.14-2.51 2.583-2.51 2.583s.452 1.443 2.51 2.583c1.943 1.078 4.856 1.078 6.8 0 2.058-1.14 2.51-2.583 2.51-2.583s-.452-1.443-2.51-2.583zm5.16-2.692a3.862 3.862 0 0 0-1.395-2.388c-1.037-.848-2.376-.838-3.352-.387-.267.123-.546-.091-.465-.375.334-1.17.06-2.468-.886-3.221-1.254-1.001-3.255-.486-4.522 1.149-.127.164-.36.087-.376-.12-.088-1.045-.583-2.046-1.488-2.548-1.808-1.004-4.255.123-5.463 2.508-.655 1.29-.766 2.746-.443 3.97a8.453 8.453 0 0 1-1.334-.342c-2.327-.81-3.69-3.157-3.044-5.236.166-.535.477-1.043.477-1.043s-1.447 1.45-1.447 3.654c0 2.077 1.18 3.808 2.908 4.74 1.73.932 3.824.824 5.582.118a6.493 6.493 0 0 0 2.057-1.27c.183-.172.47-.035.417.207-.14.634-.131 1.3.027 1.954.374 1.544 1.65 2.573 3.16 2.573.262 0 .518-.029.766-.083.267-.059.518.187.377.43-.346.756-.993 1.405-1.872 1.717-1.6.565-3.4.085-4.02-1.074-.625-1.167-.203-2.615.946-3.232a.948.948 0 0 0-.946-1.645c-2.058 1.184-2.79 3.846-1.636 5.954 1.155 2.108 3.727 2.926 5.785 1.741 1.58-.91 2.37-2.587 2.226-4.241-.023-.266.247-.443.476-.306a3.85 3.85 0 0 0 1.973.542c2.338 0 4.235-1.764 4.235-3.94 0-1.46-.864-2.735-2.143-3.402z"/>
+            </svg>
+          </a>
+        </div>
+        <p class="copyright text-white">Copyright © 2023-present</p>
+      </div>
+    </footer>
+
+    <!-- Reseller Modal -->
+    <div id="resellerModal" class="reseller-modal" onclick="if(event.target===this)closeResellerModal()">
+      <div class="reseller-modal-content">
+        <div class="flex justify-between items-center px-6 py-4 border-b">
+          <h3 id="id_reseller_modal_title" class="text-lg font-bold text-gray-800">Authorized Resellers in China</h3>
+          <button onclick="closeResellerModal()" class="text-gray-400 hover:text-gray-600 transition" aria-label="Close">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+          </button>
+        </div>
+        <div class="px-6 py-4 space-y-4">
+          
+          <!-- Reseller: 麦软商城 -->
+          <a href="https://www.mairuan.com/redirect/?product=MathCapture&referer=buy" target="_blank" rel="noopener noreferrer" class="block p-4 rounded-xl border border-gray-200 hover:border-pink-400 hover:shadow-md transition-all duration-300 group">
+            <div class="flex items-center justify-between">
+              <div>
+                <h4 class="font-bold text-gray-800 group-hover:text-pink-600 transition">麦软商城</h4>
+              </div>
+              <svg class="w-5 h-5 text-gray-400 group-hover:text-pink-500 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+            </div>
+          </a>
+          
+          <!-- Reseller: 科来技术软件专营店 -->
+          <a href="https://item.jd.com/10233110829627.html" target="_blank" rel="noopener noreferrer" class="block p-4 rounded-xl border border-gray-200 hover:border-pink-400 hover:shadow-md transition-all duration-300 group">
+            <div class="flex items-center justify-between">
+              <div>
+                <h4 class="font-bold text-gray-800 group-hover:text-pink-600 transition">科来技术软件专营店</h4>
+              </div>
+              <svg class="w-5 h-5 text-gray-400 group-hover:text-pink-500 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+            </div>
+          </a>
+
+          <!-- Reseller: 龙莹软件 -->
+          <a href="https://shop324208426.taobao.com" target="_blank" rel="noopener noreferrer" class="block p-4 rounded-xl border border-gray-200 hover:border-pink-400 hover:shadow-md transition-all duration-300 group">
+            <div class="flex items-center justify-between">
+              <div>
+                <h4 class="font-bold text-gray-800 group-hover:text-pink-600 transition">龙莹软件</h4>
+              </div>
+              <svg class="w-5 h-5 text-gray-400 group-hover:text-pink-500 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </div>
+
+    <script>
+      /* ==================== Nav scroll effect ==================== */
+      var scrollpos = window.scrollY;
+      var header = document.getElementById("header");
+      var navcontent = document.getElementById("nav-content");
+      var navaction = document.getElementById("navAction");
+      var toToggle = document.querySelectorAll(".toggleColour");
+
+      document.addEventListener("scroll", function () {
+        scrollpos = window.scrollY;
+        if (scrollpos > 10) {
+          header.classList.add("bg-white");
+          navaction.classList.remove("bg-white");
+          navaction.classList.add("gradient");
+          navaction.classList.remove("text-gray-800");
+          navaction.classList.add("text-white");
+          for (var i = 0; i < toToggle.length; i++) {
+            toToggle[i].classList.add("text-gray-800");
+            toToggle[i].classList.remove("text-white");
+          }
+          header.classList.add("shadow");
+          navcontent.classList.remove("bg-gray-100");
+          navcontent.classList.add("bg-white");
+        } else {
+          header.classList.remove("bg-white");
+          navaction.classList.remove("gradient");
+          navaction.classList.add("bg-white");
+          navaction.classList.remove("text-white");
+          navaction.classList.add("text-gray-800");
+          for (var i = 0; i < toToggle.length; i++) {
+            toToggle[i].classList.add("text-white");
+            toToggle[i].classList.remove("text-gray-800");
+          }
+          header.classList.remove("shadow");
+          navcontent.classList.remove("bg-white");
+          navcontent.classList.add("bg-gray-100");
+        }
+      });
+
+      /* ==================== Mobile nav toggle ==================== */
+      var navMenuDiv = document.getElementById("nav-content");
+      var navMenu = document.getElementById("nav-toggle");
+
+      document.onclick = check;
+      function check(e) {
+        var target = (e && e.target) || (event && event.srcElement);
+        if (!checkParent(target, navMenuDiv)) {
+          if (checkParent(target, navMenu)) {
+            if (navMenuDiv.classList.contains("hidden")) {
+              navMenuDiv.classList.remove("hidden");
+            } else {
+              navMenuDiv.classList.add("hidden");
+            }
+          } else {
+            navMenuDiv.classList.add("hidden");
+          }
+        }
+      }
+      function checkParent(t, elm) {
+        while (t.parentNode) {
+          if (t == elm) {
+            return true;
+          }
+          t = t.parentNode;
+        }
+        return false;
+      }
+
+      /* ==================== FAQ accordion ==================== */
+      document.querySelectorAll('.faq-trigger').forEach(function (trigger) {
+        trigger.addEventListener('click', function () {
+          var item = this.closest('.faq-item');
+          var isOpen = item.classList.contains('open');
+          document.querySelectorAll('.faq-item').forEach(function (fi) {
+            fi.classList.remove('open');
+          });
+          if (!isOpen) {
+            item.classList.add('open');
+          }
+        });
+      });
+
+      /* ==================== Reseller modal ==================== */
+      function openResellerModal() {
+        document.getElementById('resellerModal').classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeResellerModal() {
+        document.getElementById('resellerModal').classList.remove('open');
+        document.body.style.overflow = '';
+      }
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeResellerModal();
+      });
+
+      /* ==================== i18n ==================== */
+      var currentLanguage = 'en';
+      var userLang = navigator.language || navigator.userLanguage;
+
+      var i18nData = {
+        en: {
+          // nav
+          "Features": "Features",
+          "Office Plugin": "Office Plugin",
+          "Guide": "Guide",
+          "Pricing": "Pricing",
+          "Support": "Support",
+          "Privacy Policy": "Privacy Policy",
+          "Download for macOS": "Download for macOS",
+          // channels
+          "id_channels_intro": "We offer both subscription and one-time purchase options. Prices vary by region and are displayed in each channel at checkout.",
+          "id_channels_title": "Purchase Channels",
+          "id_channel_appstore_title": "App Store",
+          "id_channel_appstore_desc": "Purchase via Apple App Store. Prices shown at checkout based on your region. Provide macOS and iOS versions.",
+          "id_channel_appstore_btn": "View on App Store",
+          "id_channel_agent_title": "Authorized Resellers",
+          "id_channel_agent_desc": "Multiple resellers available. Prices shown at checkout. Provide macOS, iOS, Windows 10/11, Linux, and HarmonyOS (HarmonyOS) versions.",
+          "id_channel_agent_btn": "Buy via Reseller",
+          "id_reseller_modal_title": "Authorized Resellers in China",
+          // faq
+          "id_faq_title": "Frequently Asked Questions",
+          "id_faq_q1": "Which platforms are supported?",
+          "id_faq_a1": "MathCapture is available for macOS, iOS, Windows 10/11, Linux, and HarmonyOS.",
+          "id_faq_q2": "Can I get a refund?",
+          "id_faq_a2": "We do not sell software directly. All sales and refunds are handled by the App Store or our resellers. For App Store purchases, please request a refund directly from the App Store. For reseller purchases, please contact the reseller for their refund policy.",
+          // cta
+          "id_cta_title": "Still have questions?",
+          "id_cta_subtitle": "We're here to help. Reach out and we'll get back to you.",
+          "id_cta_btn": "Contact us"
+        },
+        zh: {
+          // nav
+          "Features": "功能",
+          "Office Plugin": "Office 插件",
+          "Guide": "使用教程",
+          "Pricing": "定价",
+          "Support": "联系我们",
+          "Privacy Policy": "隐私协议",
+          "Download for macOS": "下载 macOS 版",
+          // channels
+          "id_channels_intro": "我们提供订阅制和买断制两种购买方式。各国实际价格不同，具体价格请在各渠道查看。",
+          "id_channels_title": "购买渠道",
+          "id_channel_appstore_title": "App Store",
+          "id_channel_appstore_desc": "通过 Apple App Store 购买。价格根据您的地区在结算时显示。仅提供macOS和iOS版本。",
+          "id_channel_appstore_btn": "前往 App Store",
+          "id_channel_agent_title": "授权代理商",
+          "id_channel_agent_desc": "有多家代理商可选。具体价格在结算时显示。提供macOS、iOS、Windows 10/11、Linux 和HarmonyOS（鸿蒙系统）版本。",
+          "id_channel_agent_btn": "通过代理商购买",
+          "id_reseller_modal_title": "中国授权代理商",
+          
+          // faq
+          "id_faq_title": "常见问题",
+          "id_faq_q1": "支持哪些平台？",
+          "id_faq_a1": "MathCapture 支持 macOS、iOS、Windows 10/11、Linux 和HarmonyOS（鸿蒙系统）。",
+          "id_faq_q2": "可以退款吗？",
+          "id_faq_a2": "我们不直接销售软件，所有销售和退款均由 App Store 或代理商处理。通过 App Store 购买的用户，请直接向 App Store 申请退款。通过代理商购买的用户，请向代理商咨询其退款政策。",
+          // cta
+          "id_cta_title": "还有其他问题？",
+          "id_cta_subtitle": "我们随时为您提供帮助，请与我们联系。",
+          "id_cta_btn": "联系我们"
+        }
+      };
+
+      function applyLanguage(lang) {
+        currentLanguage = lang;
+        var data = i18nData[lang] || i18nData['en'];
+        var map = {
+          "id_features_1": "Features",
+          "id_office_plugin": "Office Plugin",
+          "id_guide": "Guide",
+          "id_pricing_nav": "Pricing",
+          "id_support_1": "Support",
+          "id_privacy_policy": "Privacy Policy",
+          "navAction": "Download for macOS"
+        };
+        // Nav items
+        for (var elemId in map) {
+          var el = document.getElementById(elemId);
+          if (el && data[map[elemId]]) {
+            el.innerText = data[map[elemId]];
+          }
+        }
+        // id-based text
+        var idKeys = [
+          "id_pricing_title","id_pricing_subtitle","id_pricing_subtitle2",
+          "id_channels_intro",
+          "id_channels_title",
+          "id_channel_appstore_title","id_channel_appstore_desc","id_channel_appstore_btn",
+          "id_channel_agent_title","id_channel_agent_desc","id_channel_agent_btn",
+          "id_reseller_modal_title",
+          "id_faq_title","id_faq_q1","id_faq_a1","id_faq_q2","id_faq_a2",
+          "id_cta_title","id_cta_subtitle","id_cta_btn"
+        ];
+        idKeys.forEach(function(key){
+          var el = document.getElementById(key);
+          if (el && data[key]) {
+            el.innerText = data[key];
+          }
+        });
+
+        // Hide Guide link for non-Chinese users (same as index.html)
+        var guideLink = document.getElementById('id_guide');
+        if (guideLink) {
+          guideLink.hidden = (lang !== 'zh');
+        }
+      }
+
+      if (userLang.startsWith('zh')) {
+        applyLanguage('zh');
+      } else {
+        applyLanguage('en');
+      }
+    </script>
+  </body>
+</html>
