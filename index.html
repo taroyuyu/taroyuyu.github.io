@@ -261,6 +261,12 @@
                 </svg>
                 macOS
               </button>
+              <button onclick="switchPlatform('ipados')" id="btn-ipados">
+                <svg class="inline-block w-4 h-4 mr-1" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18 1H6c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2zM15 21H9v-1h6v1z"/>
+                </svg>
+                iPadOS
+              </button>
               <button onclick="switchPlatform('windows')" id="btn-windows">
                 <svg class="inline-block w-4 h-4 mr-1" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M4,4H11V11H4V4M4,13H11V20H4V13M13,4H20V11H13V4M13,13H20V20H13V13Z"/>
@@ -818,21 +824,25 @@
         const btnMac = document.getElementById('btn-macos');
         const btnWin = document.getElementById('btn-windows');
         const btnLinux = document.getElementById('btn-linux');
+        const btnIpad = document.getElementById('btn-ipados');
         const btnHarmony = document.getElementById('btn-harmonyos');
         
         btnMac.classList.remove('active');
         btnWin.classList.remove('active');
         btnLinux.classList.remove('active');
+        btnIpad.classList.remove('active');
         btnHarmony.classList.remove('active');
         
-        if (platform === 'macos') {
-          btnMac.classList.add('active');
-        } else if (platform === 'windows') {
-          btnWin.classList.add('active');
-        } else if (platform === 'linux') {
-          btnLinux.classList.add('active');
-        } else {
-          btnHarmony.classList.add('active');
+        const activeBtnMap = {
+          macos: btnMac,
+          windows: btnWin,
+          linux: btnLinux,
+          ipados: btnIpad,
+          harmonyos: btnHarmony
+        };
+        const activeBtn = activeBtnMap[platform];
+        if (activeBtn) {
+          activeBtn.classList.add('active');
         }
         
         // Update feature images
@@ -887,6 +897,11 @@
           const linuxUrl = 'https://github.com/taroyuyu/taroyuyu.github.io/releases/tag/linux';
           heroBtn.setAttribute('onclick', "window.location.href='" + linuxUrl + "'");
           navBtn.setAttribute('onclick', "window.location.href='" + linuxUrl + "'");
+        } else if (platform === 'ipados') {
+          // iPadOS 下载链接（App Store）
+          const ipadUrl = 'https://apps.apple.com/cn/app/mathcapture365-equation-editor/id6753909547';
+          heroBtn.setAttribute('onclick', "window.location.href='" + ipadUrl + "'");
+          navBtn.setAttribute('onclick', "window.location.href='" + ipadUrl + "'");
         } else {
           // HarmonyOS 下载链接（华为应用市场）
           const harmonyUrl = 'https://appgallery.huawei.com/app/detail?id=tech.mathcapture.capture';
@@ -907,6 +922,7 @@
           macos: { en: 'Download for macOS', zh: '下载 macOS 版' },
           windows: { en: 'Download for Windows', zh: '下载 Windows 版' },
           linux: { en: 'Download for Linux', zh: '下载 Linux 版' },
+          ipados: { en: 'Download for iPadOS', zh: '下载 iPadOS 版' },
           harmonyos: { en: 'Download for HarmonyOS', zh: '下载 HarmonyOS 版' }
         };
         
