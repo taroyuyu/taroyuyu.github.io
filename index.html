@@ -98,6 +98,9 @@
       /* Platform Toggle Styles */
       .platform-toggle {
         display: inline-flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 4px;
         background: rgba(255, 255, 255, 0.2);
         border-radius: 9999px;
         padding: 3px;
@@ -125,6 +128,15 @@
 
       .platform-toggle button:hover:not(.active) {
         background: rgba(255, 255, 255, 0.15);
+      }
+
+      /* HarmonyOS 官方 wordmark（深色素材）在渐变背景上反色为浅色，激活时恢复原色 */
+      .platform-toggle button img.harmony-logo {
+        filter: invert(1) brightness(1.05);
+      }
+
+      .platform-toggle button.active img.harmony-logo {
+        filter: none;
       }
 
       /* Scrolled state - when nav has white background */
@@ -260,6 +272,9 @@
                   <path d="M3 3h18v18H3V3zm2 3v2h14V6H5zm0 4v2h10v-2H5zm0 4v2h14v-2H5z"/>
                 </svg>
                 Linux
+              </button>
+              <button onclick="switchPlatform('harmonyos')" id="btn-harmonyos">
+                <img src="assets/images/harmonyos_logo.png" alt="HarmonyOS" title="HarmonyOS" class="inline-block align-middle harmony-logo" style="height:18px;width:auto;">
               </button>
             </div>
           </div>
@@ -803,17 +818,21 @@
         const btnMac = document.getElementById('btn-macos');
         const btnWin = document.getElementById('btn-windows');
         const btnLinux = document.getElementById('btn-linux');
+        const btnHarmony = document.getElementById('btn-harmonyos');
         
         btnMac.classList.remove('active');
         btnWin.classList.remove('active');
         btnLinux.classList.remove('active');
+        btnHarmony.classList.remove('active');
         
         if (platform === 'macos') {
           btnMac.classList.add('active');
         } else if (platform === 'windows') {
           btnWin.classList.add('active');
-        } else {
+        } else if (platform === 'linux') {
           btnLinux.classList.add('active');
+        } else {
+          btnHarmony.classList.add('active');
         }
         
         // Update feature images
@@ -863,11 +882,16 @@
           const winUrl = 'https://github.com/taroyuyu/taroyuyu.github.io/releases/download/win-MathCapture-1.1.0-win64/MathCapture-1.1.0-win64-setup.exe';
           heroBtn.setAttribute('onclick', "window.location.href='" + winUrl + "'");
           navBtn.setAttribute('onclick', "window.location.href='" + winUrl + "'");
-        } else {
+        } else if (platform === 'linux') {
           // Linux 下载链接
-          const winUrl = 'https://github.com/taroyuyu/taroyuyu.github.io/releases/tag/linux';
-          heroBtn.setAttribute('onclick', "window.location.href='" + winUrl + "'");
-          navBtn.setAttribute('onclick', "window.location.href='" + winUrl + "'");
+          const linuxUrl = 'https://github.com/taroyuyu/taroyuyu.github.io/releases/tag/linux';
+          heroBtn.setAttribute('onclick', "window.location.href='" + linuxUrl + "'");
+          navBtn.setAttribute('onclick', "window.location.href='" + linuxUrl + "'");
+        } else {
+          // HarmonyOS 下载链接（华为应用市场）
+          const harmonyUrl = 'https://appgallery.huawei.com/app/detail?id=tech.mathcapture.capture';
+          heroBtn.setAttribute('onclick', "window.location.href='" + harmonyUrl + "'");
+          navBtn.setAttribute('onclick', "window.location.href='" + harmonyUrl + "'");
         }
         
         // Update button text based on current language
@@ -878,30 +902,19 @@
         const heroBtn = document.getElementById('hero_download_button');
         const navBtn = document.getElementById('navAction');
         
-        if (currentPlatform === 'macos') {
-          if (currentLanguage === 'zh') {
-            heroBtn.textContent = '下载 macOS 版';
-            navBtn.textContent = '下载 macOS 版';
-          } else {
-            heroBtn.textContent = 'Download for macOS';
-            navBtn.textContent = 'Download for macOS';
-          }
-        } else if (currentPlatform === 'windows') {
-          if (currentLanguage === 'zh') {
-            heroBtn.textContent = '下载 Windows 版';
-            navBtn.textContent = '下载 Windows 版';
-          } else {
-            heroBtn.textContent = 'Download for Windows';
-            navBtn.textContent = 'Download for Windows';
-          }
-        } else {
-          if (currentLanguage === 'zh') {
-            heroBtn.textContent = '下载 Linux 版';
-            navBtn.textContent = '下载 Linux 版';
-          } else {
-            heroBtn.textContent = 'Download for Linux';
-            navBtn.textContent = 'Download for Linux';
-          }
+        // 各平台按钮文案（中英文）
+        const platformTexts = {
+          macos: { en: 'Download for macOS', zh: '下载 macOS 版' },
+          windows: { en: 'Download for Windows', zh: '下载 Windows 版' },
+          linux: { en: 'Download for Linux', zh: '下载 Linux 版' },
+          harmonyos: { en: 'Download for HarmonyOS', zh: '下载 HarmonyOS 版' }
+        };
+        
+        const platform = platformTexts[currentPlatform];
+        if (platform) {
+          const text = platform[currentLanguage] || platform.en;
+          heroBtn.textContent = text;
+          navBtn.textContent = text;
         }
       }
 
