@@ -497,12 +497,15 @@
 					<ol>
 						<li>
 							打开<strong>文件浏览器</strong>
+							<img src="/office_plugin/resource/zh/LinuxFileBrowser.png" alt="打开文件浏览器">
 						</li>
 						<li>
 							进入到WPS插件目录（文件夹），路径是<strong>~/.local/share/kingsoft/wps/jsaddons</strong>
+							<img src="/office_plugin/resource/zh/LinuxWPSAddonsDir.png" alt="进入WPS插件目录">
 						</li>
 						<li>
 							鼠标右击，创建一个文本文档。随后点击该文件，鼠标右击，选择“<strong>重命名</strong>”，将该文本文档的名称修改为<strong>publish.xml</strong>
+							<img src="/office_plugin/resource/zh/LinuxWPSAddonsFile.png" alt="创建public.xml文件">
 						</li>
 						<li>
 							<p>将下面的内容复制到<strong>publish.xml</strong>文件中</p>
@@ -510,10 +513,12 @@
 								<button class="copy">复制</button>
 								<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;jsplugins&gt;&lt;jspluginonline name="MathCapturePluginForWPS" type="wps" url="http://127.0.0.1:9077/" debug="" enable="enable_dev" install="null"/&gt;&lt;jspluginonline name="MathCapturePluginForWPS" type="wpp" url="http://127.0.0.1:9077/" debug="" enable="enable_dev" install="null"/&gt;&lt;/jsplugins&gt;</pre>
 							</div>
+							<img src="/office_plugin/resource/zh/LinuxWPSAddonsFileContent.png" alt="填充public.xml文件">
 						</li>
 						<li>
 							<strong>启动MathCapture，然后重启 WPS</strong>
 							<p>命令执行成功后，启动MathCapture，然后重新启动 WPS Office 即可在功能区看到本加载项。<br>要想在WPS中看到我们的MathCapture插件，需要确保MathCapture在WPS启动之前已经启动了。因为WPS需要跟我们的MathCapture进行通信，才能加载我们的MathCapture插件。</p>
+							<img src="/office_plugin/resource/zh/LinuxWPS.png" alt="WPSOfficePlugin">
 						</li>
 					</ol>
 
