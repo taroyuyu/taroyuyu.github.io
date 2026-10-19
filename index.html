@@ -576,6 +576,17 @@
             </svg>
           </a>
         </div>
+        <!-- Friend Links -->
+        <div class="mb-4 flex flex-wrap justify-center items-center gap-x-2 gap-y-1 text-sm text-white">
+          <span id="id_friend_links_label" class="opacity-70">Friend Links:</span>
+          <a href="https://www.sally.bot/zh-CN" target="_blank" rel="noopener noreferrer"
+             class="underline hover:no-underline hover:text-gray-200 transition-colors duration-200"
+             title="Sally Suite - Microsoft 和 WPS 的 AI 办公助手">Sally Suite - AI 办公助手</a>
+          <span class="opacity-50" aria-hidden="true">·</span>
+          <a href="https://www.machunjie.com" target="_blank" rel="noopener noreferrer"
+             class="underline hover:no-underline hover:text-gray-200 transition-colors duration-200"
+             title="马春杰杰 - 人工智能学习博客">马春杰杰 - AI 学习博客</a>
+        </div>
         <p class="copyright text-white">Copyright © 2023-present</p>
       </div>
     </footer>
@@ -750,6 +761,9 @@
             }
             if (data["id_support_label_content"]) {
               document.getElementById('id_support_label').innerText = data["id_support_label_content"];
+            }
+            if (data["id_friend_links_label_content"] && language === 'zh') {
+              document.getElementById('id_friend_links_label').innerText = data["id_friend_links_label_content"];
             }
             if (data["id_guide_content"]) {
               document.getElementById('id_guide').innerText = data["id_guide_content"];
